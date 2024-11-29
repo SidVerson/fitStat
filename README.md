@@ -11,7 +11,7 @@
 Клонировать проект
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/SidVerson/fitStat.git
 ```
 
 Войти в папку проекта
