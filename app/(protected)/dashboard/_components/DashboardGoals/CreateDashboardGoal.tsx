@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Autocomplete, AutocompleteItem } from "@nextui-org/autocomplete";
-import { Popover, PopoverTrigger, PopoverContent } from "@nextui-org/popover";
+import { Popover, PopoverContent, PopoverTrigger } from "@nextui-org/popover";
 import { Button } from "@nextui-org/button";
 import { IconTargetArrow } from "@tabler/icons-react";
 import { Input } from "@nextui-org/input";
@@ -54,14 +54,15 @@ export default function CreateDashboardGoal() {
     >
       <PopoverTrigger>
         <Button size="sm" className="absolute bottom-5 left-3">
-          <IconTargetArrow size={20} className="text-black dark:text-primary" /> Set Goal
+          <IconTargetArrow size={20} className="text-black dark:text-primary" />{" "}
+          Установить цель
         </Button>
       </PopoverTrigger>
       <PopoverContent>
         {(titleProps) => (
           <form className="px-1 py-2 w-full" onSubmit={handleSubmit}>
             <p className="text-small font-bold text-foreground" {...titleProps}>
-              Set New Goal
+              Установить новую цель
             </p>
             <div className="mt-2 flex flex-col gap-2 w-full">
               <Autocomplete
@@ -83,12 +84,12 @@ export default function CreateDashboardGoal() {
                 size="sm"
                 endContent={
                   <div className="pointer-events-none flex items-center">
-                    <span className="text-zinc-400 text-small">kg</span>
+                    <span className="text-zinc-400 text-small">кг</span>
                   </div>
                 }
               />
               <Button type="submit" color="primary">
-                Save
+                Сохранить
               </Button>
             </div>
           </form>

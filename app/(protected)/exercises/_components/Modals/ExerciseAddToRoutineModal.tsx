@@ -1,25 +1,19 @@
 "use client";
 import { useContext, useState } from "react";
 import {
-  handleAddExerciseToNewRoutine,
   handleAddExerciseToExistingRoutine,
+  handleAddExerciseToNewRoutine,
 } from "@/server-actions/ExerciseServerActions";
 import { User } from "@nextui-org/user";
 import { ExerciseAddToRoutineModalContext } from "@/contexts/ExerciseAddToRoutineModalContext";
 
-import {
-  Modal,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-} from "@nextui-org/modal";
+import { Modal, ModalBody, ModalContent, ModalHeader } from "@nextui-org/modal";
 import { Button } from "@nextui-org/button";
 import { IconPlus } from "@tabler/icons-react";
 import { Input } from "@nextui-org/input";
 import { Divider } from "@nextui-org/divider";
 import { toast } from "sonner";
-import { RadioGroup, Radio } from "@nextui-org/radio";
+import { Radio, RadioGroup } from "@nextui-org/radio";
 
 export default function ExerciseAddToRoutineModal() {
   const { exercise, isOpen, onOpenChange, userRoutines } = useContext(
@@ -147,7 +141,7 @@ export default function ExerciseAddToRoutineModal() {
         {(onClose) => (
           <>
             <ModalHeader className="flex">
-              Add {exercise.name} to a Routine
+              Добавить {exercise.name} в программу
             </ModalHeader>
             <ModalBody className="pb-5">
               {page === 1 && (
@@ -173,7 +167,7 @@ export default function ExerciseAddToRoutineModal() {
                     isInvalid={setsInvalid}
                     errorMessage={
                       setsInvalid
-                        ? "Please enter a valid number of sets"
+                        ? "Введите валидное кол-во подходов"
                         : undefined
                     }
                   />
@@ -183,8 +177,8 @@ export default function ExerciseAddToRoutineModal() {
                     defaultValue="reps"
                     onValueChange={setTrackingType}
                   >
-                    <Radio value="reps">Reps</Radio>
-                    <Radio value="duration">Duration</Radio>
+                    <Radio value="reps">Повторения</Radio>
+                    <Radio value="duration">Длительность</Radio>
                   </RadioGroup>
 
                   {trackingType === "reps" ? (
@@ -193,8 +187,8 @@ export default function ExerciseAddToRoutineModal() {
                       size="sm"
                       variant="bordered"
                       name="reps"
-                      label="Reps"
-                      placeholder="Reps..."
+                      label="Подходы"
+                      placeholder="Подходы..."
                       value={reps}
                       onChange={(e) => {
                         setReps(e.target.value);
@@ -206,7 +200,7 @@ export default function ExerciseAddToRoutineModal() {
                       isInvalid={repsInvalid}
                       errorMessage={
                         repsInvalid
-                          ? "Please enter a valid number of reps"
+                          ? "Введите валидное кол-во подходов"
                           : undefined
                       }
                     />
@@ -216,8 +210,8 @@ export default function ExerciseAddToRoutineModal() {
                       size="sm"
                       name="duration"
                       variant="bordered"
-                      label="Duration"
-                      placeholder="Duration..."
+                      label="Длительность"
+                      placeholder="Длительность..."
                       value={duration}
                       onChange={(e) => {
                         setDuration(e.target.value);
@@ -229,7 +223,7 @@ export default function ExerciseAddToRoutineModal() {
                       isInvalid={durationInvalid}
                       errorMessage={
                         durationInvalid
-                          ? "Please enter a valid duration"
+                          ? "Введите валидную длительность"
                           : undefined
                       }
                     />
@@ -246,12 +240,12 @@ export default function ExerciseAddToRoutineModal() {
               {page === 2 && (
                 <div>
                   <form onSubmit={handleAddToNewRoutine} className="space-y-3">
-                    <h5 className="font-semibold mb-2">New Routine</h5>
+                    <h5 className="font-semibold mb-2">Новая программа</h5>
                     <Input
                       name="routineName"
-                      placeholder="My awesome workout plan"
+                      placeholder="Моя супер программа"
                       size="sm"
-                      label="Routine Name"
+                      label="Название"
                       variant="bordered"
                       className="grow mb-3"
                       value={routineName}
@@ -263,14 +257,12 @@ export default function ExerciseAddToRoutineModal() {
                       }}
                       isInvalid={routineNameInvalid}
                       errorMessage={
-                        routineNameInvalid
-                          ? "Please enter a routine name"
-                          : undefined
+                        routineNameInvalid ? "Введите название" : undefined
                       }
                     />
                     <div>
                       <Button type="submit" size="md">
-                        Save
+                        Сохранить
                       </Button>
                     </div>
                   </form>
@@ -279,7 +271,7 @@ export default function ExerciseAddToRoutineModal() {
                     <>
                       <Divider className="my-3 dark:bg-zinc-800" />
 
-                      <h5 className="font-semibold mb-2">Existing Routines</h5>
+                      <h5 className="font-semibold mb-2">Ваши упражнения</h5>
 
                       <ul>
                         {userRoutines.map((routine) => (
@@ -293,7 +285,7 @@ export default function ExerciseAddToRoutineModal() {
                             >
                               <User
                                 name={routine.name}
-                                description={`${routine.exerciseCount} Exercises`}
+                                description={`${routine.exerciseCount} Упражнений`}
                               />
                               <div>
                                 <Button
@@ -316,7 +308,7 @@ export default function ExerciseAddToRoutineModal() {
 
                   <div>
                     <Button onClick={() => setPage(1)} size="md">
-                      Back
+                      Назад
                     </Button>
                   </div>
                 </div>

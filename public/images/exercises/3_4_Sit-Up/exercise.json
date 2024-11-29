@@ -1,17 +1,17 @@
 {
-  "name": "3/4 Sit-Up",
+  "name": "Приседания на 3/4",
   "force": "pull",
   "level": "beginner",
   "mechanic": "compound",
-  "equipment": "body only",
+  "equipment": "body_only",
   "primaryMuscles": ["abdominals"],
   "secondaryMuscles": [],
   "instructions": [
-    "Lie down on the floor and secure your feet. Your legs should be bent at the knees.",
-    "Place your hands behind or to the side of your head. You will begin with your back on the ground. This will be your starting position.",
-    "Flex your hips and spine to raise your torso toward your knees.",
-    "At the top of the contraction your torso should be perpendicular to the ground. Reverse the motion, going only Â¾ of the way down.",
-    "Repeat for the recommended amount of repetitions."
+    "Лягте на пол и зафиксируйте стопы. Ноги должны быть согнуты в коленях",
+    "Положите руки за голову или сбоку от нее. Начните с положения спиной на полу. Это будет ваше исходное положение",
+    "Согните бедра и позвоночник, чтобы поднять туловище к коленям",
+    "В верхней точке сокращения ваш торс должен быть перпендикулярен земле. Выполните обратное движение, опустившись только на ¾ пути вниз",
+    "Повторите рекомендованное количество повторений."
   ],
   "category": "strength"
 }

@@ -1,5 +1,5 @@
 {
-  "name": "Alternate Hammer Curl",
+  "name": "Попеременные подъемы гантелей молотком",
   "force": "pull",
   "level": "beginner",
   "mechanic": "isolation",
@@ -11,12 +11,12 @@
     "forearms"
   ],
   "instructions": [
-    "Stand up with your torso upright and a dumbbell in each hand being held at arms length. The elbows should be close to the torso.",
-    "The palms of the hands should be facing your torso. This will be your starting position.",
-    "While holding the upper arm stationary, curl the right weight forward while contracting the biceps as you breathe out. Continue the movement until your biceps is fully contracted and the dumbbells are at shoulder level. Hold the contracted position for a second as you squeeze the biceps. Tip: Only the forearms should move.",
-    "Slowly begin to bring the dumbbells back to starting position as your breathe in.",
-    "Repeat the movement with the left hand. This equals one repetition.",
-    "Continue alternating in this manner for the recommended amount of repetitions."
+    "Встаньте прямо, держа гантели в каждой руке на вытянутых руках. Локти должны находиться близко к туловищу.",
+    "Ладони рук должны быть обращены к туловищу. Это будет исходная позиция.",
+    "Удерживая верхнюю часть руки неподвижной, согните правую руку с гантелью, сокращая бицепс, на выдохе. Продолжайте движение, пока бицепс полностью не сократится, а гантель не окажется на уровне плеча. Задержитесь на секунду в верхней точке, напрягая бицепс. Совет: двигаться должны только предплечья.",
+    "Медленно начните возвращать гантель в исходное положение на вдохе.",
+    "Повторите движение левой рукой. Это будет одно повторение.",
+    "Продолжайте чередовать руки таким образом на рекомендованное количество повторений."
   ],
   "category": "strength"
 }

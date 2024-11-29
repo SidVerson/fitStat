@@ -9,7 +9,6 @@ import {
   IconCalendarWeek,
   IconFlame,
   IconHourglass,
-  IconTarget,
   IconTrophy,
 } from "@tabler/icons-react";
 
@@ -19,7 +18,7 @@ export default function DashboardCards() {
       <Suspense
         fallback={
           <DashboardCardTemplate
-            title="Weekly Workouts"
+            title="Еженедельные тренировки"
             icon={<IconCalendarWeek className="text-zinc-400" />}
           >
             <Spinner color="primary" />
@@ -31,7 +30,7 @@ export default function DashboardCards() {
       <Suspense
         fallback={
           <DashboardCardTemplate
-            title="Avg Workout Time"
+            title="Среднее время тренировки"
             icon={<IconHourglass className="text-danger" />}
           >
             <Spinner color="primary" />
@@ -43,7 +42,7 @@ export default function DashboardCards() {
       <Suspense
         fallback={
           <DashboardCardTemplate
-            title="Daily Streak"
+            title="Ежедневная череда"
             icon={<IconFlame className="text-danger" />}
           >
             <Spinner color="primary" />
@@ -55,7 +54,7 @@ export default function DashboardCards() {
       <Suspense
         fallback={
           <DashboardCardTemplate
-            title="Weekly PBs"
+            title="Недельные достижения"
             icon={<IconTrophy className="text-danger" />}
           >
             <Spinner color="primary" />

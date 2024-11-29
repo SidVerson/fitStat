@@ -18,9 +18,9 @@ export function generateViewport() {
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "FitForge: Log, Analyze, and Optimize Your Workouts",
+  title: "FitStat: Анализируйте и преумножайте свои успехи в спорте",
   description:
-    "Take Control of Your Fitness Goals with FitForge. The intuitive workout tracking web app designed to optimize your gym sessions and improve your results.",
+    "Возьмите под контроль свои фитнес-цели с помощью FitStat. Интуитивно понятное веб-приложение для отслеживания тренировок, разработанное для оптимизации занятий в спортзале и улучшения результатов.",
 };
 
 export default async function RootLayout({
@@ -30,7 +30,7 @@ export default async function RootLayout({
 }) {
   return (
     <html
-      lang="en"
+      lang="ru"
       className="min-h-dvh flex flex-col"
       suppressHydrationWarning
     >

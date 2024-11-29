@@ -1,5 +1,5 @@
 {
-  "name": "Balance Board",
+  "name": "Балансировочная Доска",
   "force": null,
   "level": "beginner",
   "mechanic": "compound",
@@ -12,9 +12,9 @@
     "quadriceps"
   ],
   "instructions": [
-    "Place a balance board in front of you.",
-    "Stand up on it and try to balance yourself.",
-    "Hold the balance for as long as desired."
+    "Поставьте балансировочную доску перед собой.",
+    "Встаньте на нее и попытайтесь удержать равновесие.",
+    "Держитесь в равновесии столько, сколько хотите."
   ],
   "category": "strength"
 }

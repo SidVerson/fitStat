@@ -2,7 +2,7 @@
 import useSWR from "swr";
 import { Divider } from "@nextui-org/divider";
 import { Spinner } from "@nextui-org/spinner";
-import { Set, Exercise, WorkoutLog } from "./ModalChartTypes";
+import { Exercise, Set, WorkoutLog } from "./ModalChartTypes";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
@@ -75,28 +75,28 @@ export default function RecordsTab({
   if (data.length === 0)
     return (
       <div className="text-zinc-500">
-        Previous performances of this exercise will display here - check back
-        later!
+        Предыдущие выполнения этого упражнения будут отображаться здесь -
+        загляните сюда позже!
       </div>
     );
 
   return (
     <div>
-      <h4 className="uppercase text-xs text-zinc-500 mb-3">Personal Records</h4>
+      <h4 className="uppercase text-xs text-zinc-500 mb-3">Личные рекорды</h4>
       <ul className="space-y-3">
         <li className="flex justify-between">
           <span>1RM</span>
-          <span>{max1RM.toFixed(2)}KG</span>
+          <span>{max1RM.toFixed(2)}кг</span>
         </li>
         <li className="flex justify-between">
-          <span>Weight</span>
+          <span>Вес</span>
           <span>
-            {maxVolume.weight}KG (x{maxVolume.reps})
+            {maxVolume.weight}кг (x{maxVolume.reps})
           </span>
         </li>
         <li className="flex justify-between">
-          <span>Max Volume</span>
-          <span>{maxVolume.volume}KG</span>
+          <span>Максимальный объем</span>
+          <span>{maxVolume.volume}кг</span>
         </li>
       </ul>
 
@@ -105,9 +105,9 @@ export default function RecordsTab({
       <table className="w-full text-center">
         <thead className="text-xs text-zinc-500 uppercase">
           <tr>
-            <th className="font-medium">Reps</th>
-            <th className="font-medium">Best Performance</th>
-            <th className="font-medium">Predicted</th>
+            <th className="font-medium">Повторения</th>
+            <th className="font-medium">Лучший результат</th>
+            <th className="font-medium">Прогнозируемый</th>
           </tr>
         </thead>
 
@@ -118,7 +118,7 @@ export default function RecordsTab({
               <td>
                 {bestByReps[reps - 1]?.weight > 0 ? (
                   <>
-                    <div>{`${bestByReps[reps - 1].weight} kg`}</div>
+                    <div>{`${bestByReps[reps - 1].weight} кг`}</div>
                     <div className="text-xs">
                       {new Date(bestByReps[reps - 1].date).toLocaleDateString()}
                     </div>
@@ -127,7 +127,7 @@ export default function RecordsTab({
                   <div>-</div>
                 )}
               </td>
-              <td>{predictWeightForReps(max1RM, reps).toFixed(2)} KG</td>
+              <td>{predictWeightForReps(max1RM, reps).toFixed(2)} кг</td>
             </tr>
           ))}
         </tbody>

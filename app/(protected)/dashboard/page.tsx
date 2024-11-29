@@ -23,7 +23,7 @@ export default function DashboardPage({
 
   return (
     <>
-      <PageHeading title="Dashboard" />
+      <PageHeading title="Статистика" />
       <DashboardCards />
       <DashboardCharts
         chart1DateRange={chart1DateRange}

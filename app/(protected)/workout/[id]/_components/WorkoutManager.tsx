@@ -102,7 +102,7 @@ export default function WorkoutManager({ workout }: { workout: Workout }) {
         (set.duration === null || !Number(set.duration)))
     ) {
       toast.error(
-        "Please fill in all fields before marking the set as completed",
+        "Пожалуйста, заполните все поля, прежде чем отмечать подход как завершенный",
       );
       return;
     }
@@ -119,9 +119,9 @@ export default function WorkoutManager({ workout }: { workout: Workout }) {
       exerciseToUpdate.sets[setIndex] = setToUpdate;
       updatedWorkoutExercises[exerciseIndex] = exerciseToUpdate;
       if (setToUpdate.completed) {
-        toast.success(`${exerciseName} Set ${setIndex + 1} completed`);
+        toast.success(`${exerciseName} Подход ${setIndex + 1} завершен`);
       } else {
-        toast(`${exerciseName} Set ${setIndex + 1} marked as incomplete`);
+        toast(`${exerciseName} Подход ${setIndex + 1} отмечен незавершенным`);
       }
       return updatedWorkoutExercises;
     });
@@ -198,7 +198,7 @@ export default function WorkoutManager({ workout }: { workout: Workout }) {
       };
       exerciseToUpdate.sets = [...exerciseToUpdate.sets, newSet];
       updatedWorkoutExercises[exerciseIndex] = exerciseToUpdate;
-      toast.success(`Set added to ${exerciseName}`);
+      toast.success(`Подход добавлен в ${exerciseName}`);
       return updatedWorkoutExercises;
     });
   };
@@ -211,7 +211,7 @@ export default function WorkoutManager({ workout }: { workout: Workout }) {
       if (updatedWorkoutExercises[exerciseIndex].sets.length > 1) {
         if (
           window.confirm(
-            `Are you sure you want to delete the last set from ${exerciseName}?`,
+            `Вы уверены, что хотите удалить последний подход из ${exerciseName}?`,
           )
         ) {
           const exerciseToUpdate = {
@@ -219,12 +219,12 @@ export default function WorkoutManager({ workout }: { workout: Workout }) {
           };
           exerciseToUpdate.sets.pop();
           updatedWorkoutExercises[exerciseIndex] = exerciseToUpdate;
-          toast.success(`Set removed from ${exerciseName}`);
+          toast.success(`Подход удален из ${exerciseName}`);
           return updatedWorkoutExercises;
         }
       } else {
         toast.error(
-          `Cannot remove. At least one set is required for ${exerciseName}.`,
+          `Невозможно удалить. Как минимум один подход необходим для ${exerciseName}.`,
         );
       }
       return prevWorkoutExercises;
@@ -235,14 +235,14 @@ export default function WorkoutManager({ workout }: { workout: Workout }) {
   const cancelWorkout = () => {
     if (
       window.confirm(
-        "Are you sure you want to cancel the workout? No data will be saved.",
+        "Вы уверены, что хотите отменить тренировку? Данные не будут сохранены.",
       )
     ) {
       setWorkoutExercises([]);
       setWorkoutDuration(0);
       setWorkoutStartTime(null);
       setActiveWorkoutRoutine(null);
-      toast("Workout cancelled");
+      toast("Тренировка отменена");
       router.push("/workout");
     }
   };
@@ -255,7 +255,7 @@ export default function WorkoutManager({ workout }: { workout: Workout }) {
 
       if (hasIncompleteSets) {
         const proceedWithIncompleteSets = window.confirm(
-          "There are incomplete sets. These will not be saved. Do you want to proceed?",
+          "Есть неполные подходы. Они не будут сохранены. Вы хотите продолжить?",
         );
         if (!proceedWithIncompleteSets) {
           return;
@@ -271,7 +271,7 @@ export default function WorkoutManager({ workout }: { workout: Workout }) {
 
       if (filteredExercises.length === 0) {
         toast.error(
-          "You need to complete at least one set to save the workout.",
+          "Чтобы сохранить тренировку, необходимо выполнить хотя бы один сет.",
         );
         return;
       }
@@ -308,17 +308,17 @@ export default function WorkoutManager({ workout }: { workout: Workout }) {
           setWorkoutDuration(0);
           setWorkoutStartTime(null);
           setActiveWorkoutRoutine(null);
-          toast.success("Workout saved successfully!");
+          toast.success("Тренировка успешно сохранена!");
         } else {
-          toast.error("Failed to save workout");
+          toast.error("Не удалось сохранить тренировку");
         }
       } catch (error) {
-        toast.error("An error occurred while saving the workout");
+        toast.error("При сохранении тренировки произошла ошибка");
       } finally {
         setIsSaving(false);
       }
     } else {
-      toast.error("No workout exercises available.");
+      toast.error("Тренировочные упражнения отсутствуют.");
     }
   };
 
@@ -370,14 +370,14 @@ export default function WorkoutManager({ workout }: { workout: Workout }) {
                   onPress={() => addSet(index, exercise.exerciseName)}
                 >
                   <IconPlus size={16} />
-                  Add Set
+                  Добавить подход
                 </Button>
                 <Button
                   size="sm"
                   onPress={() => removeSet(index, exercise.exerciseName)}
                 >
                   <IconX size={16} />
-                  Remove Set
+                  Удалить подход
                 </Button>
               </ButtonGroup>
             </CardFooter>

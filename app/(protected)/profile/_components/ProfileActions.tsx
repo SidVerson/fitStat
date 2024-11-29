@@ -10,11 +10,8 @@ export default function ProfileActions() {
 
   return (
     <div>
-      <Button
-        variant="flat"
-        onClick={() => signOut(() => router.push("/"))}
-      >
-        <IconLogout /> Sign out
+      <Button variant="flat" onClick={() => signOut(() => router.push("/"))}>
+        <IconLogout /> Выйти
       </Button>
     </div>
   );

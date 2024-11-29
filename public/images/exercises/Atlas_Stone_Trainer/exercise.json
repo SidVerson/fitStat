@@ -1,10 +1,10 @@
 {
-  "name": "Atlas Stone Trainer",
+  "name": "Тренажер Атласного Камня",
   "force": "pull",
   "level": "intermediate",
   "mechanic": "compound",
   "equipment": "other",
-  "primaryMuscles": ["lower back"],
+  "primaryMuscles": ["lower_back"],
   "secondaryMuscles": [
     "biceps",
     "forearms",
@@ -13,10 +13,10 @@
     "quadriceps"
   ],
   "instructions": [
-    "This trainer is effective for developing Atlas Stone strength for those who don't have access to stones, and are typically made from bar ends or heavy pipe.",
-    "Begin by loading the desired weight onto the bar. Straddle the weight, wrapping your arms around the implement, bending at the hips.",
-    "Begin by pulling the weight up past the knees, extending through the hips. As the weight clears the knees, it can be lapped by resting it on your thighs and sitting back, hugging it tightly to your chest.",
-    "Finish the movement by extending through your hips and knees to raise the weight as high as possible. The weight can be returned to the lap or to the ground for successive repetitions."
+    "Этот тренажер эффективен для развития силы Атласного камня для тех, кто не имеет доступа к камням, и обычно изготавливается из концов штанги или тяжелых труб.",
+    "Начните с того, чтобы загрузить нужный вес на штангу. Встаньте на ширину плеч, обхватив груз руками, сгибая бедра.",
+    "Начните тянуть вес вверх, проходя мимо колен, выпрямляя бедра. Когда вес пройдет мимо колен, его можно положить на бедра, сидя назад и прижимая его к груди.",
+    "Завершите движение, выпрямляя бедра и колени, чтобы поднять вес как можно выше. Вес можно вернуть в положение на бедра или на пол для последующих повторений."
   ],
   "category": "strongman"
 }

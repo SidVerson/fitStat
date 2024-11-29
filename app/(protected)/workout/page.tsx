@@ -1,12 +1,11 @@
 import { auth } from "@clerk/nextjs";
 import prisma from "@/prisma/prisma";
-import { Prisma } from "@prisma/client";
+import { Prisma, WorkoutPlan } from "@prisma/client";
 import Link from "next/link";
 import { Button } from "@nextui-org/button";
 import { IconPlus } from "@tabler/icons-react";
 import PageHeading from "@/components/PageHeading/PageHeading";
 import RoutineCards from "./_components/RoutineCards";
-import { WorkoutPlan } from "@prisma/client";
 
 type Exercise = {
   id: string;
@@ -72,8 +71,8 @@ export default async function WorkoutPage() {
 
   return (
     <>
-    <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-      <PageHeading title="Start Workout" />
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+        <PageHeading title="Запустить тренировку" />
 
         <Button
           as={Link}
@@ -81,14 +80,16 @@ export default async function WorkoutPage() {
           color="primary"
           className="gap-unit-1 mb-3"
         >
-          <IconPlus size={16} /> New Routine
+          <IconPlus size={16} /> Новая программа
         </Button>
       </div>
 
-      <h2 className="font-semibold text-xl md:text-2xl mb-3">Your Routines</h2>
+      <h2 className="font-semibold text-xl md:text-2xl mb-3">Ваши программы</h2>
       <RoutineCards routines={userRoutines} isSystem={false} />
 
-      <h3 className="font-semibold text-xl md:text-2xl mb-3 mt-10">Example Routines</h3>
+      <h3 className="font-semibold text-xl md:text-2xl mb-3 mt-10">
+        Отобранные тренировки
+      </h3>
       <RoutineCards routines={systemRoutines} isSystem={true} />
     </>
   );

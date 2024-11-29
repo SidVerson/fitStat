@@ -1,8 +1,8 @@
 "use client";
 import { useContext } from "react";
 import { ExerciseDetailModalContext } from "@/contexts/ExerciseDetailModalContext";
-import { Modal, ModalContent, ModalHeader, ModalBody } from "@nextui-org/modal";
-import { Tabs, Tab } from "@nextui-org/tabs";
+import { Modal, ModalBody, ModalContent, ModalHeader } from "@nextui-org/modal";
+import { Tab, Tabs } from "@nextui-org/tabs";
 import {
   IconChartBar,
   IconHistory,
@@ -46,7 +46,7 @@ export default function ExerciseDetailModal() {
                   title={
                     <div className="flex items-center space-x-2">
                       <IconInfoCircle size={17} />
-                      <span>About</span>
+                      <span>Информация</span>
                     </div>
                   }
                 >
@@ -58,7 +58,7 @@ export default function ExerciseDetailModal() {
                   title={
                     <div className="flex items-center space-x-2">
                       <IconHistory size={17} />
-                      <span>History</span>
+                      <span>История</span>
                     </div>
                   }
                 >
@@ -69,7 +69,7 @@ export default function ExerciseDetailModal() {
                   title={
                     <div className="flex items-center space-x-2">
                       <IconChartBar size={17} />
-                      <span>Charts</span>
+                      <span>Статистика</span>
                     </div>
                   }
                 >
@@ -83,7 +83,7 @@ export default function ExerciseDetailModal() {
                   title={
                     <div className="flex items-center space-x-2">
                       <IconTrophy size={17} />
-                      <span>Records</span>
+                      <span>Записи</span>
                     </div>
                   }
                 >

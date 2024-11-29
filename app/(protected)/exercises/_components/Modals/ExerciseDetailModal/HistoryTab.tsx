@@ -2,7 +2,7 @@
 import useSWR from "swr";
 import { Card, CardBody, CardHeader } from "@nextui-org/card";
 import { Spinner } from "@nextui-org/spinner";
-import { Set, Exercise, WorkoutLog } from "./ModalChartTypes";
+import { Exercise, Set, WorkoutLog } from "./ModalChartTypes";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
@@ -26,8 +26,8 @@ export default function HistoryTab({
   if (data.length === 0)
     return (
       <div className="text-zinc-500">
-        Previous performances of this exercise will display here - check back
-        later!
+        Предыдущие выполнения этого упражнения будут отображаться здесь -
+        загляните сюда позже!
       </div>
     );
 
@@ -48,17 +48,17 @@ export default function HistoryTab({
           <CardBody className="pt-0">
             {log.exercises.map((exercise: Exercise) => (
               <div key={exercise.id}>
-                <h5>Sets:</h5>
+                <h5>Подходы:</h5>
                 <ul>
                   {exercise.sets.map((set: Set, index: number) => (
                     <li
                       key={set.id}
                       className="text-zinc-500 flex justify-between"
                     >
-                      <span>{`${index + 1}: ${set.weight || "-"}kg x ${set.reps || "-"}`}</span>
+                      <span>{`${index + 1}: ${set.weight || "-"}кг x ${set.reps || "-"}`}</span>
                       <span>
                         {set.weight && set.reps
-                          ? `1RM: ${calculateOneRM(set.weight, set.reps)}kg`
+                          ? `1RM: ${calculateOneRM(set.weight, set.reps)}кг`
                           : "N/A"}
                       </span>
                     </li>

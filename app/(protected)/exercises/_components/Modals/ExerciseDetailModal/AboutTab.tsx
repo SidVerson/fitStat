@@ -1,5 +1,5 @@
 "use client";
-import { useState, useCallback, useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import { Exercise } from "@prisma/client";
@@ -60,7 +60,7 @@ export default function AboutTab({ exercise }: { exercise: Exercise | null }) {
 
       {exercise?.instructions && (
         <>
-          <h4 className="font-semibold text-lg mb-3">Instructions</h4>
+          <h4 className="font-semibold text-lg mb-3">Инструкции</h4>
           <ol className="list-decimal list-inside space-y-2 text-sm">
             {exercise?.instructions.map((instruction, index) => (
               <li key={index}>{instruction}</li>

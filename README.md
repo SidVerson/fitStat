@@ -1,17 +1,66 @@
-# FitForge - Full stack workout tracking app
 
-Full stack workout tracking app. Browse over 800 exercises, create your own routines, record your workouts and view your data with beautiful charts. Built with Next.js 14, Clerk and Postgres
+# Fitstat
 
-## Demo
+Курсач для Ванька
 
-Link to a live demo: [Live Demo](https://fit-forge.app)
 
-![Demo Image](./public/images/screenshots/ss_exercise.webp)
 
-## Features
 
-- Coming Soon
+## Запуск
 
-## More info on my website
+Клонировать проект
 
-Link to blog post: [Blog Post](https://cwaitt.dev/projects/fit-forge)
+```bash
+  git clone https://link-to-project
+```
+
+Войти в папку проекта
+
+```bash
+  cd fitForge
+```
+
+Установить зависимости
+
+```bash
+  npm install
+```
+
+Создать файл .env со следующим содержанием
+
+```bash
+  DATABASE_URL=postgresql://ПОЛЬЗОВАТЕЛЬБД:ПАРОЛЬБД@localhost:5432/ИМЯБД
+
+```
+Создать файл .env.local со следующим содержанием
+
+```bash
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_c3VubnktY29uZG9yLTQyLmNsZXJrLmFjY291bnRzLmRldiQ
+CLERK_SECRET_KEY=sk_test_maL0kSwJRXBu7PuqD0avFXI3kk0QiYPWQbSMjr3e0u
+
+```
+
+Сделать миграции бд
+
+```bash
+  npx prisma migrate dev
+```
+
+Добавить упражнения в бд
+
+```bash
+  node prisma/scripts/CreateExcercise.js
+```
+
+Далее надо зайти в файл prisma/scripts/predefinedWorkouts и массиве тренировок поменять поля exerciseID на поля id из твоей бд после выполнить
+
+```bash
+  npx tsx prisma/scripts/MigrateRoutines.ts
+```
+
+Запустить проект
+
+```bash
+  npm run dev
+```
+

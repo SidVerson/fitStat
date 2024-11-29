@@ -4,9 +4,9 @@ import { useSidebarToggleContext } from "@/contexts/SidebarToggleContext";
 import clsx from "clsx";
 import { Button } from "@nextui-org/button";
 import {
-  IconPlayerPlay,
-  IconPlayerPause,
   IconDeviceFloppy,
+  IconPlayerPause,
+  IconPlayerPlay,
   IconX,
 } from "@tabler/icons-react";
 import { useWorkoutControls } from "@/contexts/WorkoutControlsContext";
@@ -56,7 +56,7 @@ export default function StatusBar({
       <div className="flex justify-between mb-5">
         {!workoutStartTime && (
           <Button color="primary" onPress={handleStartWorkout}>
-            <IconPlayerPlay /> Start Workout
+            <IconPlayerPlay /> Начать тренировку
           </Button>
         )}
         {workoutStartTime && (
@@ -67,15 +67,15 @@ export default function StatusBar({
                 onPress={handlePauseToggle}
               >
                 {isPaused ? <IconPlayerPlay /> : <IconPlayerPause />}
-                <span>{isPaused ? "Resume" : "Pause"}</span>
+                <span>{isPaused ? "Продолжить" : "Остановить"}</span>
               </Button>
               <Button onPress={completeWorkout} color="primary">
                 <IconDeviceFloppy />
-                <span>Save</span>
+                <span>Сохранить</span>
               </Button>
               <Button color="danger" onPress={cancelWorkout}>
                 <IconX />
-                <span>Cancel</span>
+                <span>Отменить</span>
               </Button>
             </div>
             <div className="block md:hidden justify-start space-x-3">

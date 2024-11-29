@@ -1,11 +1,11 @@
 "use client";
 import {
-  LineChart,
   Line,
-  XAxis,
-  Tooltip,
+  LineChart,
   ResponsiveContainer,
+  Tooltip,
   TooltipProps,
+  XAxis,
 } from "recharts";
 import ChartMockDataMessage from "./ChartMockDataMessage";
 
@@ -23,10 +23,9 @@ function CustomTooltip({
     return (
       <div className="bg-zinc-800 text-white px-4 py-2 rounded-xl shadow-xl text-xs">
         <p className="font-semibold">
-          Volume Load: <span className="text-primary">{payload[0].value}</span>{" "}
-          Kg
+          Нагрузка: <span className="text-primary">{payload[0].value}</span> кг
         </p>
-        <p>Period: {label}</p>
+        <p>Дата: {label}</p>
       </div>
     );
   }
@@ -43,10 +42,13 @@ export default function DashboardChartVolumeLoadClient({
 }) {
   return (
     <>
-      {isUsingMockData && (<ChartMockDataMessage />)}
-      
+      {isUsingMockData && <ChartMockDataMessage />}
+
       <ResponsiveContainer width="100%" height="100%">
-        <LineChart data={data} margin={{ top: 0, right: 0, bottom: 0, left: 0 }}>
+        <LineChart
+          data={data}
+          margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
+        >
           <Line type="monotone" dataKey="totalVolumeLoad" stroke="#000000" />
           <XAxis dataKey="period" tick={{ fontSize: "10px" }} />
           <Tooltip content={<CustomTooltip />} />

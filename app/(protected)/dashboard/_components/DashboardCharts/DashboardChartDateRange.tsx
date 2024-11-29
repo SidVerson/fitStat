@@ -1,5 +1,5 @@
 "use client";
-import { useSearchParams, usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Slider } from "@nextui-org/slider";
 
 export default function DashboardChartDateRange({
@@ -54,11 +54,11 @@ export default function DashboardChartDateRange({
       className="w-44"
       classNames={{ mark: "text-xs text-zinc-600 dark:text-zinc-400" }}
       marks={[
-        { value: 10, label: "3D" },
-        { value: 20, label: "1W" },
-        { value: 30, label: "1M" },
-        { value: 40, label: "3M" },
-        { value: 50, label: "1Y" },
+        { value: 10, label: "3д." },
+        { value: 20, label: "1н." },
+        { value: 30, label: "1м." },
+        { value: 40, label: "3м." },
+        { value: 50, label: "1г." },
       ]}
     />
   );

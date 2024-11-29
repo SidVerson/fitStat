@@ -7,6 +7,7 @@ import {
   IconPlayerPlayFilled,
 } from "@tabler/icons-react";
 import { Button } from "@nextui-org/button";
+
 export default function ActiveWorkoutWarning() {
   const { activeWorkoutRoutine } = useWorkoutControls();
   const pathname = usePathname();
@@ -17,10 +18,10 @@ export default function ActiveWorkoutWarning() {
   }
 
   return (
-    <div className="py-2 px-3 bg-zinc-900 rounded-xl flex justify-between items-center mb-3">
+    <div className="py-2 px-3 bg-content1 rounded-xl flex justify-between items-center mb-3">
       <div className="flex gap-2 items-center">
         <IconAlertCircleFilled size={18} className="text-warning" />
-        <p className="text-sm">You have an active workout</p>
+        <p className="text-sm">У вас идет тренировка</p>
       </div>
 
       <Button
@@ -30,7 +31,7 @@ export default function ActiveWorkoutWarning() {
         href={`/workout/${activeWorkoutRoutine}`}
       >
         <IconPlayerPlayFilled size={16} />
-        Resume Workout
+        Продолжить тренировку
       </Button>
     </div>
   );

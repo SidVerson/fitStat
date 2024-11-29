@@ -1,5 +1,5 @@
 "use client";
-import { useSearchParams, usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Select, SelectItem } from "@nextui-org/select";
 import { Selection } from "@react-types/shared";
 
@@ -20,7 +20,7 @@ export default function ExerciseFilterPerPage() {
 
   return (
     <Select
-      label="Per Page"
+      label="Кол-во"
       size="sm"
       onSelectionChange={handlePerPage}
       selectedKeys={selectedKeys}

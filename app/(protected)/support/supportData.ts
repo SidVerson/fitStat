@@ -1,36 +1,36 @@
 // supportData.ts
-import Link from "next/link";
 
 export const supportData = [
   {
-    title: "Frequently Asked Questions",
+    title: "Часто задаваемые вопросы",
     subtitle:
-      "Here are some of the most common questions our users have about the Workout Tracker",
+      "Вот некоторые из наиболее распространенных вопросов, которые задают наши пользователи",
     cards: [
       {
-        title: "How do I set the equipment I have?",
+        title: "Как настроить имеющееся у меня оборудование?",
         content:
-          "To set the equipment you have access to, simply navigate to the Equipment section on your profile page, click the checkbox next to the equipment you have, and then click the 'Save' button.",
+          "Чтобы установить оборудование, к которому у вас есть доступ, просто перейдите в раздел «Оборудование» на странице вашего профиля, установите флажок напротив имеющегося у вас оборудования, а затем нажмите кнопку «Сохранить».",
       },
       {
-        title: "How do I update my personal information?",
+        title: "Как обновить свою личную информацию?",
         content:
-          "To update your personal information, simply navigate to the Details section on your profile page, and then update your information as needed. Don't forget to click the 'Save' button when you're done!",
+          "Чтобы обновить личную информацию, просто перейдите в раздел «Подробности» на странице вашего профиля, а затем обновите информацию по мере необходимости. Не забудьте нажать кнопку «Сохранить», когда закончите!",
       },
       {
-        title: "How can I filter the list of exercises on the Exercise page?",
+        title: "Как отфильтровать список упражнений на странице «Упражнения»?",
         content:
-          "To filter the list of exercises, simply click the 'Filter' button at the top of the page, and then select the filters you'd like to apply. You can filter by muscle group, equipment, and more! The filters will be stored in the url, so you can easily share the filtered list with others.",
+          "Чтобы отфильтровать список упражнений, просто нажмите кнопку «Фильтр» в верхней части страницы, а затем выберите фильтры, которые вы хотите применить. Вы можете фильтровать по группам мышц, оборудованию и т. д.! Фильтры будут сохранены в url, так что вы сможете легко поделиться отфильтрованным списком с другими.",
       },
       {
-        title: "How can I favourite exercises so i can find them easily later?",
+        title:
+          "Как я могу поместить упражнения в избранное, чтобы потом легко их находить?\n",
         content:
-          "To favourite an exercise, simply click the star icon next to the exercise you'd like to favourite. You can then view all of your favorited exercises on the Exercises page by clicking the filters button and selecting My Favourites.",
+          "Чтобы отметить упражнение, просто нажмите на значок звезды рядом с упражнением, которое вы хотите отметить. Затем вы можете просмотреть все понравившиеся упражнения на странице «Упражнения», нажав кнопку фильтров и выбрав «Мои любимые».",
       },
       {
-        title: "How can i create workout routines?",
+        title: "Как создать программу тренировок?",
         content:
-          "There are two ways in which you can create routines: 1. You can create a routine from scratch by navigating to the Start Workout page and clicking the 'Create Routine' button. 2. You can create a routine from the Browse Exercises page by clicking the 'plus icon' next to each exercise.",
+          "Существует два способа создания рутин: 1. Вы можете создать программу с нуля, перейдя на страницу «Начало тренировки» и нажав кнопку «Создать программу». 2. Вы можете создать рутину на странице Browse Exercises, нажав на значок «плюс» рядом с каждым упражнением.",
       },
     ],
   },

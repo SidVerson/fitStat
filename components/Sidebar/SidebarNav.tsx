@@ -3,6 +3,17 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import clsx from "clsx";
 import { useSidebarToggleContext } from "@/contexts/SidebarToggleContext";
+import {
+  IconActivity,
+  IconBook,
+  IconClipboardList,
+  IconDashboard,
+  IconHelp,
+  IconJumpRope,
+  IconLayoutSidebarLeftCollapse,
+  IconLayoutSidebarLeftExpand,
+  IconUser,
+} from "@tabler/icons-react";
 
 interface NavItemProps {
   icon: JSX.Element;
@@ -11,18 +22,6 @@ interface NavItemProps {
   active: boolean;
 }
 
-import {
-  IconDashboard,
-  IconJumpRope,
-  IconActivity,
-  IconUser,
-  IconBook,
-  IconHelp,
-  IconLayoutSidebarLeftExpand,
-  IconLayoutSidebarLeftCollapse,
-  IconClipboardList,
-} from "@tabler/icons-react";
-
 export default function SidebarNav() {
   const { sidebarCollapse, toggleSidebar } = useSidebarToggleContext();
   const pathname = usePathname();
@@ -30,66 +29,64 @@ export default function SidebarNav() {
   return (
     <div className="px-5">
       <ul className="text-sm">
-        <SubMenuTitle title="Data" />
+        <SubMenuTitle title="Данные" />
 
         <NavItem
           icon={<IconDashboard size={22} className="shrink-0" />}
-          label="Dashboard"
+          label="Статистика"
           href="/dashboard"
           active={pathname === "/dashboard"}
         />
 
         <NavItem
           icon={<IconActivity size={22} className="shrink-0" />}
-          label="Activity Log"
+          label="Тренировки"
           href="/activity"
           active={pathname === "/activity"}
         />
 
         <NavItem
           icon={<IconUser size={22} className="shrink-0" />}
-          label="Profile"
+          label="Профиль"
           href="/profile"
           active={pathname === "/profile"}
         />
 
-        <SubMenuTitle title="Workout" />
+        <SubMenuTitle title="Тренировки" />
 
         <NavItem
           icon={<IconJumpRope size={22} className="shrink-0" />}
-          label="Start Workout"
+          label="Начать тренировку"
           href="/workout"
           active={pathname.startsWith("/workout")}
         />
         <NavItem
           icon={<IconClipboardList size={22} className="shrink-0" />}
-          label="Routine Creator"
+          label="Конструктор программ"
           href="/edit-routine/step-1"
           active={pathname.startsWith("/edit-routine/")}
         />
         <NavItem
           icon={<IconBook size={22} className="shrink-0" />}
-          label="Browse Exercises"
+          label="Просмотреть упражнения"
           href="/exercises"
           active={pathname === "/exercises"}
         />
 
-        <SubMenuTitle title="More" />
+        <SubMenuTitle title="Еще" />
 
         <NavItem
           icon={<IconHelp size={22} className="shrink-0" />}
-          label="Support"
+          label="Поддержка"
           href="/support"
           active={pathname === "/support"}
         />
 
         <SidebarToggle />
-
       </ul>
     </div>
   );
 }
-
 
 function SubMenuTitle({ title }: { title: string }) {
   const { sidebarCollapse } = useSidebarToggleContext();
@@ -102,7 +99,6 @@ function SubMenuTitle({ title }: { title: string }) {
     )
   );
 }
-
 
 function NavItem({ icon, label, href, active }: NavItemProps) {
   const { sidebarCollapse } = useSidebarToggleContext();
@@ -129,7 +125,6 @@ function NavItem({ icon, label, href, active }: NavItemProps) {
   );
 }
 
-
 function SidebarToggle() {
   const { sidebarCollapse, toggleSidebar } = useSidebarToggleContext();
 
@@ -146,7 +141,7 @@ function SidebarToggle() {
         ) : (
           <IconLayoutSidebarLeftCollapse size={22} className="shrink-0" />
         )}
-        {!sidebarCollapse && <div>Collapse Sidebar</div>}
+        {!sidebarCollapse && <div>Cвернуть</div>}
       </div>
     </li>
   );

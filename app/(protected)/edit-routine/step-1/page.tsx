@@ -19,7 +19,7 @@ export default async function NewRoutineFormStepOne({
 
   let routineName = "";
   let routineNotes = "";
-  let pageTitle = "New Routine";
+  let pageTitle = "Новая программа";
 
   if (routineId !== null) {
     const routine = await prisma.workoutPlan.findUnique({
@@ -35,7 +35,7 @@ export default async function NewRoutineFormStepOne({
 
     routineName = routine?.name || "";
     routineNotes = routine?.notes || "";
-    pageTitle = `Edit Routine: ${routineName}`;
+    pageTitle = `Редактировать программу: ${routineName}`;
   }
 
   return (

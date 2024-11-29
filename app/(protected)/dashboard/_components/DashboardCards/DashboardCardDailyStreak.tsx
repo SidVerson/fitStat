@@ -39,7 +39,7 @@ export default async function DashboardCardDailyStreak() {
 
   return (
     <DashboardCardTemplate
-      title="Daily Streak"
+      title="Ежедневная череда"
       icon={<IconFlame className="text-danger" />}
     >
       {streak}

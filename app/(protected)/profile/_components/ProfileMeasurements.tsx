@@ -47,30 +47,30 @@ export default function ProfileMeasurements({
     <Card shadow="none" className="shadow-md">
       <CardHeader className="text-xl font-semibold px-5 pb-0 gap-x-3  items-center">
         <IconRulerMeasure className="text-danger" />
-        Measurements
+        Параметры тела
       </CardHeader>
       <CardBody className="gap-y-3 px-5">
         <Input
           type="number"
-          label="Height (cm)"
+          label="Рост (см)"
           size="sm"
-          placeholder="Enter your Height"
+          placeholder="Введите ваш рост"
           value={height.toString()}
           onChange={(e) => setHeight(e.target.value)}
         />
 
         <Input
           type="number"
-          label="Weight (kg)"
+          label="Вес (кг)"
           size="sm"
-          placeholder="Enter your Weight"
+          placeholder="Введите ваш вес"
           value={weight.toString()}
           onChange={(e) => setWeight(e.target.value)}
         />
 
         <Input
           type="number"
-          label="BMI"
+          label="ИМТ"
           size="sm"
           value={(Number(weight) / (Number(height) / 100) ** 2).toFixed(2)}
           isDisabled
@@ -78,16 +78,16 @@ export default function ProfileMeasurements({
 
         <Input
           type="number"
-          label="Age"
+          label="Возраст"
           size="sm"
-          placeholder="Enter your Age"
+          placeholder="Введите ваш возраст"
           value={age.toString()}
           onChange={(e) => setAge(e.target.value)}
         />
 
         <p className="text-sm text-zinc-600 dark:text-zinc-400">
-          Your data is secure with us. We only use your information to enhance
-          your user experience and never share it with third parties.
+          Мы надежно защищаем ваши данные. Мы используем вашу информацию только
+          для улучшения и никогда не передаем ее третьим лицам.
         </p>
       </CardBody>
       <CardFooter className="px-5">
@@ -97,7 +97,7 @@ export default function ProfileMeasurements({
           isLoading={isLoading}
           startContent={<IconDeviceFloppy size={20} />}
         >
-          Save
+          Сохранить
         </Button>
       </CardFooter>
     </Card>

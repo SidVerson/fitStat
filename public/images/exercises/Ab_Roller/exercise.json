@@ -1,5 +1,5 @@
 {
-  "name": "Ab Roller",
+  "name": "Ролик для пресса",
   "force": "pull",
   "level": "intermediate",
   "mechanic": "compound",
@@ -7,10 +7,10 @@
   "primaryMuscles": ["abdominals"],
   "secondaryMuscles": ["shoulders"],
   "instructions": [
-    "Hold the Ab Roller with both hands and kneel on the floor.",
-    "Now place the ab roller on the floor in front of you so that you are on all your hands and knees (as in a kneeling push up position). This will be your starting position.",
-    "Slowly roll the ab roller straight forward, stretching your body into a straight position. Tip: Go down as far as you can without touching the floor with your body. Breathe in during this portion of the movement.",
-    "After a pause at the stretched position, start pulling yourself back to the starting position as you breathe out. Tip: Go slowly and keep your abs tight at all times."
+    "Возьмитесь за ролик для пресса обеими руками и встаньте на колени.",
+    "Установите ролик на пол перед собой так, чтобы вы оказались на руках и коленях (как в позиции для отжиманий с колен). Это будет исходная позиция.",
+    "Медленно прокатите ролик прямо вперед, растягивая тело до прямой линии. Совет: опускайтесь так далеко, как сможете, не касаясь пола телом. Вдыхайте во время этой части движения.",
+    "После паузы в растянутой позиции начните возвращаться в исходное положение, выдыхая. Совет: двигайтесь медленно и держите пресс в напряжении на протяжении всего упражнения."
   ],
   "category": "strength"
 }

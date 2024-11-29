@@ -15,7 +15,7 @@ export default function SidebarToggleButton() {
         ) : (
           <IconLayoutSidebarLeftCollapse size={22} className="shrink-0" />
         )}
-        {!sidebarCollapse && <div>Collapse Sidebar</div>}
+        {!sidebarCollapse && <div>Свернуть</div>}
       </div>
     </li>
   );

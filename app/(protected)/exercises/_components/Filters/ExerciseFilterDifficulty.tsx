@@ -1,13 +1,13 @@
 "use client";
-import { useSearchParams, usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Select, SelectItem } from "@nextui-org/select";
 import { Selection } from "@react-types/shared";
 import { IconFilter } from "@tabler/icons-react";
 
 const levels = [
-  { label: "Beginner", value: "beginner" },
-  { label: "Intermediate", value: "intermediate" },
-  { label: "Expert", value: "expert" },
+  { label: "Легкий", value: "beginner" },
+  { label: "Средний", value: "intermediate" },
+  { label: "Тяжелый", value: "expert" },
 ];
 
 export default function ExerciseFilterLevel() {
@@ -35,8 +35,8 @@ export default function ExerciseFilterLevel() {
   return (
     <Select
       key={selectedKeys ? selectedKeys.size : "empty"}
-      label="Level"
-      placeholder="Select a level..."
+      label="Сложность"
+      placeholder="Выберите сложность..."
       size="sm"
       items={levels}
       onSelectionChange={handleFilterLevel}

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { format } from "date-fns";
-import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
+import { Card, CardBody, CardFooter, CardHeader } from "@nextui-org/card";
 import { Chip } from "@nextui-org/chip";
 import { Button } from "@nextui-org/button";
 import Link from "next/link";
@@ -72,7 +72,7 @@ export default function RoutineCard({
           <p className="text-md leading-5">{routine.name}</p>
           {!isSystem && (
             <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-5">
-              Updated: {format(new Date(routine.updatedAt), "MM/dd/yyyy")}
+              Изменено: {format(new Date(routine.updatedAt), "MM/dd/yyyy")}
             </p>
           )}
         </div>
@@ -104,14 +104,14 @@ export default function RoutineCard({
           {isCurrentWorkout ? (
             <>
               <IconPlayerPlayFilled size={16} />
-              Continue Workout
+              Продолжить тренировку
             </>
           ) : isAnotherWorkoutInProgress ? (
-            "Another Workout is in Progress"
+            "Еще одна тренировка в процессе"
           ) : (
             <>
               <IconPlayerPlayFilled size={16} />
-              Start Workout
+              Начать тренировку
             </>
           )}
         </Button>

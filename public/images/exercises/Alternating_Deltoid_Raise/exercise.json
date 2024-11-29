@@ -1,5 +1,5 @@
 {
-  "name": "Alternating Deltoid Raise",
+  "name": "Попеременные подъемы гантелей на плечи",
   "force": "push",
   "level": "beginner",
   "mechanic": "isolation",
@@ -9,11 +9,11 @@
   ],
   "secondaryMuscles": [],
   "instructions": [
-    "In a standing position, hold a pair of dumbbells at your side.",
-    "Keeping your elbows slightly bent, raise the weights directly in front of you to shoulder height, avoiding any swinging or cheating.",
-    "Return the weights to your side.",
-    "On the next repetition, raise the weights laterally, raising them out to your side to about shoulder height.",
-    "Return the weights to the starting position and continue alternating to the front and side."
+    "Встаньте, держа пару гантелей по бокам.",
+    "Слегка согнув локти, поднимите гантели прямо перед собой до уровня плеч, избегая раскачиваний и читинга.",
+    "Верните гантели в исходное положение.",
+    "На следующее повторение поднимите гантели в стороны, поднимите их до уровня плеч.",
+    "Верните гантели в исходное положение и продолжайте чередовать подъемы вперед и в стороны."
   ],
   "category": "strength"
 }

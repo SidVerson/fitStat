@@ -2,14 +2,20 @@
 import useSWR from "swr";
 import { useMemo } from "react";
 import {
-  parseISO,
-  startOfWeek,
   eachWeekOfInterval,
   format,
+  parseISO,
+  startOfWeek,
   subMonths,
 } from "date-fns";
-import { LineChart, Line, XAxis, Tooltip, ResponsiveContainer } from "recharts";
-import { TooltipProps } from "recharts";
+import {
+  Line,
+  LineChart,
+  ResponsiveContainer,
+  Tooltip,
+  TooltipProps,
+  XAxis,
+} from "recharts";
 import { Card, CardBody, CardHeader } from "@nextui-org/card";
 import { Spinner } from "@nextui-org/spinner";
 import { WorkoutLog } from "./ModalChartTypes";
@@ -92,10 +98,10 @@ function prepareChartData(workouts: WorkoutLog[], weeks: string[]) {
 
 const getFriendlyName = (key: string): string => {
   const mappings: { [key: string]: string } = {
-    bestSet: "Best Set",
-    totalVolume: "Total Volume",
-    prProgression: "PR Progression",
-    maxConsecutiveReps: "Max Consecutive Reps",
+    bestSet: "Лучший подход",
+    totalVolume: "Общий объем",
+    prProgression: "Прогрессия",
+    maxConsecutiveReps: "Максимальное количество повторений подряд",
   };
   return mappings[key] || key;
 };
@@ -152,8 +158,8 @@ export default function ChartsTab({
   if (data.length === 0)
     return (
       <div className="text-zinc-500">
-        Previous performances of this exercise will display here - check back
-        later!
+        Предыдущие выполнения этого упражнения будут отображаться здесь -
+        загляните сюда позже!
       </div>
     );
 
@@ -204,19 +210,19 @@ export default function ChartsTab({
 
   return (
     <div className="space-y-3">
-      <ChartCard title="Best Set">
+      <ChartCard title="Лучший подход">
         <Chart data={chartData} dataKey="bestSet" />
       </ChartCard>
 
-      <ChartCard title="Total Volume">
+      <ChartCard title="Общий объем">
         <Chart data={chartData} dataKey="totalVolume" />
       </ChartCard>
 
-      <ChartCard title="PR Progression (as 1RM)">
+      <ChartCard title="Прогрессия">
         <Chart data={chartData} dataKey="prProgression" />
       </ChartCard>
 
-      <ChartCard title="Max Consecutive Reps">
+      <ChartCard title="Максимальное количество повторений подряд">
         <Chart data={chartData} dataKey="maxConsecutiveReps" />
       </ChartCard>
     </div>

@@ -5,7 +5,7 @@ import { Suspense } from "react";
 export default async function ActivityPage() {
   return (
     <>
-      <PageHeading title="Activity" />
+      <PageHeading title="Тренировки" />
       <Suspense fallback={<div>Loading...</div>}>
         <ActivityList />
       </Suspense>

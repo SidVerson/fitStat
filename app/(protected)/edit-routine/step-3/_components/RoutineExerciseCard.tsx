@@ -2,9 +2,9 @@
 import { ChangeEvent } from "react";
 import { Card, CardBody } from "@nextui-org/card";
 import { Input } from "@nextui-org/input";
-import { RadioGroup, Radio } from "@nextui-org/radio";
+import { Radio, RadioGroup } from "@nextui-org/radio";
 import { Button, ButtonGroup } from "@nextui-org/button";
-import { IconArrowUp, IconArrowDown, IconTrash } from "@tabler/icons-react";
+import { IconArrowDown, IconArrowUp, IconTrash } from "@tabler/icons-react";
 import { useRouter } from "next/navigation";
 import { WorkoutPlanExercise } from "../NewRoutineTypes";
 import ExerciseOrderIndicator from "@/components/Generic/ExerciseOrderIndicator";
@@ -57,15 +57,15 @@ export default function RoutineExerciseCard({
             updateTrackingType(index, value as "reps" | "duration");
           }}
         >
-          <Radio value="reps">Reps</Radio>
-          <Radio value="duration">Duration (seconds)</Radio>
+          <Radio value="reps">Повторения</Radio>
+          <Radio value="duration">На время(секунды)</Radio>
         </RadioGroup>
 
         <div className="grid grid-cols-2 gap-x-5 mb-3">
           <Input
             size="sm"
             type="number"
-            label="Sets"
+            label="Подходы"
             value={exercise.sets !== null ? exercise.sets.toString() : ""}
             onChange={(e: ChangeEvent<HTMLInputElement>) => {
               const value = e.target.value;
@@ -81,7 +81,7 @@ export default function RoutineExerciseCard({
           {exercise.trackingType === "reps" ? (
             <Input
               size="sm"
-              label="Reps"
+              label="Повторения"
               type="number"
               value={exercise.reps !== null ? exercise.reps.toString() : ""}
               onChange={(e: ChangeEvent<HTMLInputElement>) => {
@@ -97,7 +97,7 @@ export default function RoutineExerciseCard({
           ) : (
             <Input
               size="sm"
-              label="Duration"
+              label="Длительность"
               type="number"
               value={
                 exercise.exerciseDuration !== null

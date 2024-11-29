@@ -1,5 +1,5 @@
 "use client";
-import { useSearchParams, usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useDebouncedCallback } from "use-debounce";
 import { Input } from "@nextui-org/input";
 
@@ -21,8 +21,8 @@ export default function ExerciseSearch() {
 
   return (
     <Input
-      placeholder="Search exercises..."
-      label="Search"
+      placeholder="Поиск..."
+      label="Поиск"
       className="grow"
       size="sm"
       onChange={(e) => {

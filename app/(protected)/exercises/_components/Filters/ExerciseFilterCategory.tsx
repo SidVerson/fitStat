@@ -1,17 +1,17 @@
 "use client";
-import { useSearchParams, usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Select, SelectItem } from "@nextui-org/select";
 import { Selection } from "@react-types/shared";
 import { IconFilter } from "@tabler/icons-react";
 
 const categories = [
-  { label: "Strength", value: "strength" },
-  { label: "Stretching", value: "stretching" },
-  { label: "Plyometrics", value: "plyometrics" },
-  { label: "Strongman", value: "strongman" },
-  { label: "Powerlifting", value: "powerlifting" },
-  { label: "Cardio", value: "cardio" },
-  { label: "Olympic Weightlifting", value: "olympic_weightlifting" },
+  { label: "Силовые", value: "strength" },
+  { label: "Растяжка", value: "stretching" },
+  { label: "Плиометрика", value: "plyometrics" },
+  { label: "Нагрузка", value: "strongman" },
+  { label: "Пауэрлифтинг", value: "powerlifting" },
+  { label: "Кардио", value: "cardio" },
+  { label: "Тяжелая атлетика", value: "olympic_weightlifting" },
 ];
 
 export default function ExerciseFilterCategory() {
@@ -39,8 +39,8 @@ export default function ExerciseFilterCategory() {
   return (
     <Select
       key={selectedKeys ? selectedKeys.size : "empty"}
-      label="Category"
-      placeholder="Select a category..."
+      label="Категория"
+      placeholder="Выберите категорию..."
       size="sm"
       items={categories}
       onSelectionChange={handleFilterCategory}

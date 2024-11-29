@@ -1,5 +1,5 @@
 {
-  "name": "Alternating Kettlebell Press",
+  "name": "Попеременный жим гирь",
   "force": "push",
   "level": "intermediate",
   "mechanic": "compound",
@@ -7,9 +7,9 @@
   "primaryMuscles": ["shoulders"],
   "secondaryMuscles": ["triceps"],
   "instructions": [
-    "Clean two kettlebells to your shoulders. Clean the kettlebells to your shoulders by extending through the legs and hips as you pull the kettlebells towards your shoulders. Rotate your wrists as you do so.",
-    "Press one directly overhead by extending through the elbow, turning it so the palm faces forward while holding the other kettlebell stationary .",
-    "Lower the pressed kettlebell to the starting position and immediately press with your other arm."
+    "Поднимите две гири до уровня плеч. Поднимите гири, выпрямляя ноги и бедра, подтягивая гири к плечам. Поверните запястья в процессе.",
+    "Поднимите одну гирю прямо вверх, выпрямляя локоть, поворачивая гирю так, чтобы ладонь была направлена вперед, удерживая вторую гирю неподвижно.",
+    "Опустите поднятую гирю в исходное положение и сразу поднимите другую гирю."
   ],
   "category": "strength"
 }

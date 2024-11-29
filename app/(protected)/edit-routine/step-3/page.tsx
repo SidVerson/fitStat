@@ -38,12 +38,13 @@ export default async function NewRoutineFormStepTwo({
 
   return (
     <>
-      <PageHeading title="New Routine - Step 3" />
+      <PageHeading title="Новая программа - шаг 3" />
       <p className="mb-3 text-zinc-600 dark:text-zinc-400 text-sm">
-        You&apos;re almost there! Now, select how you want to track each
-        exercise: by repetitions or duration. Then, arrange the exercises in
-        your preferred order. For each exercise, specify the number of reps or
-        the duration (in minutes or seconds) and the sets you aim to complete.
+        Вы почти у цели! Теперь выберите, как вы хотите отслеживать каждое
+        упражнений: по повторениям или по продолжительности. Затем расположите
+        упражнения в в нужном вам порядке. Для каждого упражнения укажите
+        количество повторений или продолжительность (в минутах или секундах) и
+        сеты, которые вы хотите выполнить.
       </p>
       <RoutineBuilder routine={routine} />
     </>

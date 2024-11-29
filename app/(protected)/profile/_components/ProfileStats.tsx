@@ -15,9 +15,9 @@ export default function ProfileStats({
         <div className="text-center">
           <div className="mb-1 space-x-1">
             <span className="text-5xl">{userMeasurements.weight}</span>
-            <span className="text-zinc-500">kg</span>
+            <span className="text-zinc-500">кг</span>
           </div>
-          <div className="text-sm text-zinc-500">Weight</div>
+          <div className="text-sm text-zinc-500">Вес</div>
         </div>
       )}
 
@@ -25,9 +25,9 @@ export default function ProfileStats({
         <div className="text-center">
           <div className="mb-1 space-x-1">
             <span className="text-5xl">{userMeasurements.height}</span>
-            <span className="text-zinc-500">cm</span>
+            <span className="text-zinc-500">см</span>
           </div>
-          <div className="text-sm text-zinc-500">Height</div>
+          <div className="text-sm text-zinc-500">Рост</div>
         </div>
       )}
 
@@ -35,9 +35,9 @@ export default function ProfileStats({
         <div className="text-center">
           <div className="mb-1 space-x-1">
             <span className="text-5xl">{userMeasurements.age}</span>
-            <span className="text-zinc-500">y.o</span>
+            <span className="text-zinc-500">лет</span>
           </div>
-          <div className="text-sm text-zinc-500">Age</div>
+          <div className="text-sm text-zinc-500">Возраст</div>
         </div>
       )}
     </div>

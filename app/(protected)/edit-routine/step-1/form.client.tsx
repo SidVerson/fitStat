@@ -45,27 +45,26 @@ export default function NewRoutineFormStepOneClient({
       </CardHeader>
       <CardBody className="p-3 md:p-5">
         <p className="mb-3 text-sm text-zinc-500">
-          Welcome to the first step in creating your personalized workout plan!
-          This is where your fitness journey begins, and we&apos;re excited to
-          be a part of it. Let&apos;s start with the basics.
+          Добро пожаловать на первый шаг в создании вашего индивидуального плана
+          тренировок! С этого момента начинается ваше фитнес-путешествие, и мы
+          рады принять в нем участие. Давайте начнем с основ.
         </p>
         <form className="space-y-3" onSubmit={handleSubmit}>
           <Input
             name="routineName"
-            placeholder="My Workout Plan..."
-            label="Routine Name"
+            placeholder="Моя программа..."
+            label="Название программы"
             isRequired
             defaultValue={routineName}
           />
           <Textarea
             name="routineNotes"
-            placeholder="Workout notes..."
-            label="Notes"
+            label="Описание"
             defaultValue={routineNotes}
           />
           <div className="flex justify-center">
             <Button isDisabled={isSaving} variant="flat" type="submit">
-              Next <IconPlayerTrackNextFilled size={18} />
+              Дальше <IconPlayerTrackNextFilled size={18} />
             </Button>
           </div>
         </form>

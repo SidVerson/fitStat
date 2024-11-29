@@ -7,32 +7,32 @@ import { Card, CardHeader } from "@nextui-org/card";
 export default function DashboardLinks() {
   const links = [
     {
-      title: "Exercises",
-      description: "Browse Exercises",
+      title: "Упражнения",
+      description: "Просмотр упражнений",
       image: "02.webp",
       href: "/exercises",
       titleColour: "text-white",
       descriptionColour: "text-primary",
     },
     {
-      title: "Routine",
-      description: "Create a Routine",
+      title: "Программы",
+      description: "Создать программу",
       image: "21.webp",
       href: "edit-routine/step-1",
       titleColour: "text-white",
       descriptionColour: "text-primary",
     },
     {
-      title: "Workout",
-      description: "Start a Workout",
+      title: "Тренировки",
+      description: "Начать тренировку",
       image: "e.webp",
       href: "/workout",
       titleColour: "text-white",
       descriptionColour: "text-primary",
     },
     {
-      title: "Activity",
-      description: "View Activity",
+      title: "Активность",
+      description: "Просмотреть активность",
       image: "22.webp",
       href: "/activity",
       titleColour: "text-white",
@@ -60,7 +60,10 @@ export default function DashboardLinks() {
                 {link.title}
               </p>
               <p
-                className={clsx("font-medium text-xl", link.descriptionColour)}
+                className={clsx(
+                  "font-medium text-xl text-left",
+                  link.descriptionColour,
+                )}
               >
                 {link.description}
               </p>

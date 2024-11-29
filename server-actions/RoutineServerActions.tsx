@@ -19,9 +19,9 @@ export async function handleDeleteRoutine(routineId: string) {
 
     revalidatePath("/workout");
 
-    return { success: true, message: "Routine deleted successfully" };
+    return { success: true, message: "Программа удалена" };
   } catch (e) {
-    return { success: false, message: "Failed to delete routine" };
+    return { success: false, message: "Ошибка при удалении программы" };
   }
 }
 
@@ -55,9 +55,9 @@ export async function handleCreateRoutine(data: any) {
 
     revalidatePath("/workout");
 
-    return { success: true, message: "Routine created successfully" };
+    return { success: true, message: "Программа создана!" };
   } catch (e) {
-    return { success: false, message: "Failed to create routine" };
+    return { success: false, message: "Ошибка при создании программы" };
   }
 }
 
@@ -103,9 +103,9 @@ export async function handleEditRoutine(data: any) {
 
     revalidatePath("/workout");
 
-    return { success: true, message: "Routine edited successfully" };
+    return { success: true, message: "Программа успешно изменена" };
   } catch (e) {
-    return { success: false, message: "Failed to edit routine" };
+    return { success: false, message: "Ошибка при изменении программы" };
   }
 }
 
@@ -146,11 +146,11 @@ export async function handleCreateRoutineStepOne(
 
     return {
       success: true,
-      message: "Routine created successfully",
+      message: "Программа успешно создана!",
       newRoutineId: routine.id,
     };
   } catch (e) {
-    return { success: false, message: "Failed to create routine" };
+    return { success: false, message: "Ошибка при создании программы" };
   }
 }
 
@@ -188,9 +188,9 @@ export async function handleAddExerciseToRoutine({
 
     revalidatePath("/workout");
 
-    return { success: true, message: "Exercise added to routine successfully" };
+    return { success: true, message: "Упражнение добавлено" };
   } catch (e) {
-    return { success: false, message: "Failed to create routine" };
+    return { success: false, message: "Ошибка при добавлении" };
   }
 }
 
@@ -219,12 +219,12 @@ export async function handleRemoveExerciseFromRoutine({
 
     return {
       success: true,
-      message: "Exercise removed from routine successfully",
+      message: "Упражнение удалено",
     };
   } catch (e) {
     return {
       success: false,
-      message: "Failed to remove exercise from routine",
+      message: "Ошибка при удалении упражнения",
     };
   }
 }

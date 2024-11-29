@@ -1,18 +1,18 @@
 {
-  "name": "Backward Medicine Ball Throw",
+  "name": "Задний Бросок Мячом",
   "force": "push",
   "level": "beginner",
   "mechanic": "compound",
-  "equipment": "medicine ball",
+  "equipment": "medicine_ball",
   "primaryMuscles": [
     "shoulders"
   ],
   "secondaryMuscles": [],
   "instructions": [
-    "This exercise is best done with a partner. If you lack a partner, the ball can be thrown and retrieved or thrown against a wall.",
-    "Begin standing a few meters in front of your partner, both facing the same direction. Begin holding the ball between your legs.",
-    "Squat down and then forcefully reverse direction, coming to full extension and you toss the ball over your head to your partner.",
-    "Your partner can then roll the ball back to you. Repeat for the desired number of repetitions."
+    "Это упражнение лучше выполнять с партнером. Если партнера нет, мяч можно бросать и забирать или бросать в стену.",
+    "Начните стоять в нескольких метрах от партнера, оба смотрите в одну сторону. Держите мяч между ног.",
+    "Приседайте, затем резко меняйте направление, полностью распрямляя тело, и бросайте мяч через голову своему партнеру.",
+    "Партнер может вернуть мяч вам. Повторяйте нужное количество повторений."
   ],
   "category": "plyometrics"
 }

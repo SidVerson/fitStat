@@ -1,9 +1,9 @@
 {
-  "name": "Ball Leg Curl",
+  "name": "Сгибание Ног на Мячике",
   "force": "pull",
   "level": "beginner",
   "mechanic": "isolation",
-  "equipment": "exercise ball",
+  "equipment": "exercise_ball",
   "primaryMuscles": [
     "hamstrings"
   ],
@@ -12,11 +12,11 @@
     "glutes"
   ],
   "instructions": [
-    "Begin on the floor laying on your back with your feet on top of the ball.",
-    "Position the ball so that when your legs are extended your ankles are on top of the ball. This will be your starting position.",
-    "Raise your hips off of the ground, keeping your weight on the shoulder blades and your feet.",
-    "Flex the knees, pulling the ball as close to you as you can, contracting the hamstrings.",
-    "After a brief pause, return to the starting position."
+    "Начните упражнение, лежа на полу спиной вниз, с ногами на мяче.",
+    "Расположите мяч так, чтобы ваши лодыжки находились на мячике, когда ноги полностью выпрямлены. Это будет исходное положение.",
+    "Поднимите бедра от пола, оставив вес на лопатках и ногах.",
+    "Согните колени, подтягивая мяч как можно ближе к себе, сокращая заднюю поверхность бедра.",
+    "После короткой паузы вернитесь в исходное положение."
   ],
   "category": "strength"
 }

@@ -1,5 +1,5 @@
 {
-  "name": "Backward Drag",
+  "name": "Задний Тяговый Перетаскивание",
   "force": "pull",
   "level": "beginner",
   "mechanic": "compound",
@@ -12,11 +12,11 @@
     "forearms",
     "glutes",
     "hamstrings",
-    "lower back"
+    "lower_back"
   ],
   "instructions": [
-    "Load a sled with the desired weight, attaching a rope or straps to the sled that you can hold onto.",
-    "Begin the exercise by moving backwards for a given distance. Leaning back, extend through the legs for short steps to move as quickly as possible."
+    "Загрузите сани желаемым весом, прикрепив веревку или ремни, за которые вы сможете держаться.",
+    "Начните упражнение, двигаясь назад на заданное расстояние. Откидываясь назад, делайте короткие шаги, полностью выпрямляя ноги для максимальной скорости."
   ],
   "category": "strongman"
 }

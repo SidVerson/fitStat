@@ -1,5 +1,5 @@
 {
-  "name": "Around The Worlds",
+  "name": "Вокруг Мира",
   "force": "push",
   "level": "intermediate",
   "mechanic": "compound",
@@ -11,9 +11,9 @@
     "shoulders"
   ],
   "instructions": [
-    "Lay down on a flat bench holding a dumbbell in each hand with the palms of the hands facing towards the ceiling. Tip: Your arms should be parallel to the floor and next to your thighs. To avoid injury, make sure that you keep your elbows slightly bent. This will be your starting position.",
-    "Now move the dumbbells by creating a semi-circle as you displace them from the initial position to over the head. All of the movement should happen with the arms parallel to the floor at all times. Breathe in as you perform this portion of the movement.",
-    "Reverse the movement to return the weight to the starting position as you exhale."
+    "Лягте на плоскую скамью, держа гантели в каждой руке, ладони направлены вверх. Совет: Руки должны быть параллельны полу и находиться рядом с бедрами. Чтобы избежать травм, убедитесь, что локти слегка согнуты. Это будет ваша исходная позиция.",
+    "Теперь двигайте гантели, создавая полукруг, перемещая их от начальной позиции до положения над головой. Все движение должно происходить с руками, параллельными полу на протяжении всего упражнения. Вдыхайте при выполнении этой части движения.",
+    "Разверните движение, чтобы вернуть вес в исходное положение, выдыхая."
   ],
   "category": "strength"
 }

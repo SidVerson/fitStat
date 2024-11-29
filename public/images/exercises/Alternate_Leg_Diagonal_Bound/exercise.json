@@ -1,5 +1,5 @@
 {
-  "name": "Alternate Leg Diagonal Bound",
+  "name": "Попеременные диагональные прыжки",
   "force": "push",
   "level": "beginner",
   "mechanic": "compound",
@@ -15,10 +15,10 @@
     "hamstrings"
   ],
   "instructions": [
-    "Assume a comfortable stance with one foot slightly in front of the other.",
-    "Begin by pushing off with the front leg, driving the opposite knee forward and as high as possible before landing. Attempt to cover as much distance to each side with each bound.",
-    "It may help to use a line on the ground to guage distance from side to side.",
-    "Repeat the sequence with the other leg."
+    "Примите удобное положение, поставив одну ногу немного впереди другой.",
+    "Начните движение, оттолкнувшись передней ногой, поднимите противоположное колено вперед и как можно выше перед приземлением. Постарайтесь преодолевать как можно большее расстояние в каждую сторону при каждом прыжке.",
+    "Может помочь использование линии на земле для определения расстояния в стороны.",
+    "Повторите последовательность с другой ногой."
   ],
   "category": "plyometrics"
 }

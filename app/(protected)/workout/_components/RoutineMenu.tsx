@@ -3,17 +3,12 @@ import { useRouter } from "next/navigation";
 import { handleDeleteRoutine } from "@/server-actions/RoutineServerActions";
 import {
   Dropdown,
-  DropdownTrigger,
-  DropdownMenu,
   DropdownItem,
+  DropdownMenu,
   DropdownSection,
+  DropdownTrigger,
 } from "@nextui-org/dropdown";
-import {
-  IconEdit,
-  IconInfoCircle,
-  IconMenu2,
-  IconTrash,
-} from "@tabler/icons-react";
+import { IconEdit, IconMenu2, IconTrash } from "@tabler/icons-react";
 import { toast } from "sonner";
 
 export default function RoutineMenu({ routineId }: { routineId: string }) {
@@ -31,7 +26,7 @@ export default function RoutineMenu({ routineId }: { routineId: string }) {
   const handleAction = (key: string, routineId: string) => {
     if (key === "delete") {
       const confirmDelete = window.confirm(
-        "Are you sure you want to delete this routine?",
+        "Вы уверенны что хотите удалить эту программу?",
       );
       if (confirmDelete) {
         handleDelete(routineId);
@@ -50,16 +45,11 @@ export default function RoutineMenu({ routineId }: { routineId: string }) {
       </DropdownTrigger>
       <DropdownMenu
         aria-label="Static Actions"
-        topContent={
-          <h4 className="text-zinc-500 uppercase font-semibold text-xs px-2 pt-2">
-            Routine Actions
-          </h4>
-        }
         onAction={(key) => handleAction(String(key), routineId)}
       >
         <DropdownSection showDivider>
           <DropdownItem startContent={<IconEdit size={20} />} key="edit">
-            Edit
+            Редактировать
           </DropdownItem>
         </DropdownSection>
 
@@ -69,7 +59,7 @@ export default function RoutineMenu({ routineId }: { routineId: string }) {
           className="text-danger"
           color="danger"
         >
-          Delete Routine
+          Удалить
         </DropdownItem>
       </DropdownMenu>
     </Dropdown>

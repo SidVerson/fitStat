@@ -5,7 +5,7 @@ import DashboardCardTemplate from "./DashboardCardTemplate";
 export default function DashboardCardWeeklyPbs() {
   return (
     <DashboardCardTemplate
-      title="Weekly PBs"
+      title="Недельные достижения"
       icon={<IconTrophy className="text-danger" />}
     >
       ...

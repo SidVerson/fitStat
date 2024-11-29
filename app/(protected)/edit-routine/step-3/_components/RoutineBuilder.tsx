@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { handleEditRoutine } from "@/server-actions/RoutineServerActions";
 import SaveButton from "./SaveButton";
-import { WorkoutPlanExercise, Routine } from "../NewRoutineTypes";
+import { Routine, WorkoutPlanExercise } from "../NewRoutineTypes";
 import RoutineExerciseCard from "./RoutineExerciseCard";
 import { Reorder } from "framer-motion";
 import { Button } from "@nextui-org/button";
@@ -60,30 +60,34 @@ export default function RoutineBuilder({ routine }: { routine: Routine }) {
 
   const deleteExercise = (index: number) => {
     const isConfirmed = window.confirm(
-      "Are you sure you want to remove this exercise?",
+      "Вы точно хотите удалить это упражнение?",
     );
     if (isConfirmed) {
       const updatedExercises = [...selectedExercises];
       updatedExercises.splice(index, 1);
-      toast.success("Exercise removed");
+      toast.success("Упражнение удалено");
       setSelectedExercises(updatedExercises);
     }
   };
 
   const validateForm = () => {
     if (selectedExercises.length === 0) {
-      toast.error("At least one exercise is required.");
+      toast.error("Требуется как минимум одно упражнение");
       return false;
     }
 
     for (let exercise of selectedExercises) {
       if (exercise.sets < 1) {
-        toast.error(`${exercise.Exercise.name} should have at least 1 set.`);
+        toast.error(
+          `${exercise.Exercise.name} должно быть не менее 1 подхода.`,
+        );
         return false;
       }
 
       if (exercise.trackingType === "reps" && (exercise.reps ?? 0) < 1) {
-        toast.error(`${exercise.Exercise.name} should have at least 1 rep.`);
+        toast.error(
+          `${exercise.Exercise.name} должно быть не менее 1 повторения.`,
+        );
         return false;
       }
 
@@ -91,9 +95,7 @@ export default function RoutineBuilder({ routine }: { routine: Routine }) {
         exercise.trackingType === "duration" &&
         (exercise.exerciseDuration ?? 0) <= 0
       ) {
-        toast.error(
-          `${exercise.Exercise.name} should have a duration greater than zero.`,
-        );
+        toast.error(`${exercise.Exercise.name} должно длится больше 0.`);
         return false;
       }
     }
@@ -172,7 +174,7 @@ export default function RoutineBuilder({ routine }: { routine: Routine }) {
           as={Link}
           href={`/edit-routine/step-2?id=${routine.id}`}
         >
-          <IconPlayerTrackPrevFilled size={18} /> Back
+          <IconPlayerTrackPrevFilled size={18} /> Назад
         </Button>
         <SaveButton handleSave={handleSave} isLoading={isSaving} />
       </div>

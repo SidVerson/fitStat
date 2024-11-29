@@ -6,7 +6,6 @@ import { Button } from "@nextui-org/button";
 import { IconDeviceFloppy, IconSettings, IconUser } from "@tabler/icons-react";
 import { handleUpdateUserDetails } from "@/server-actions/UserServerActions";
 import { toast } from "sonner";
-import { UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 
 export default function ProfileDetails({
@@ -45,15 +44,15 @@ export default function ProfileDetails({
         <Card shadow="none" className="shadow-md mb-3">
           <CardHeader className="text-xl font-semibold px-5 pb-0 gap-x-3 items-center">
             <IconUser className="text-danger" />
-            Details
+            Данные
           </CardHeader>
           <CardBody className="px-5">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
               <Input
                 type="text"
-                label="Username"
+                label="Никнейм"
                 size="sm"
-                placeholder="Enter your username"
+                placeholder="Введите ваш никнейм"
                 value={inputName}
                 onChange={(e) => setInputName(e.target.value)}
                 isRequired
@@ -61,18 +60,18 @@ export default function ProfileDetails({
 
               <Input
                 type="text"
-                label="First Name"
+                label="Имя"
                 size="sm"
-                placeholder="Enter your first name"
+                placeholder="Введите имя"
                 value={inputFirstName}
                 onChange={(e) => setInputFirstName(e.target.value)}
               />
 
               <Input
                 type="text"
-                label="Last Name"
+                label="Фамилия"
                 size="sm"
-                placeholder="Enter your last name"
+                placeholder="Введите фамилию"
                 value={inputLastName}
                 onChange={(e) => setInputLastName(e.target.value)}
               />
@@ -84,7 +83,7 @@ export default function ProfileDetails({
               variant="flat"
               startContent={<IconDeviceFloppy size={20} />}
             >
-              Save
+              Обновить
             </Button>
             <Button
               as={Link}
@@ -92,7 +91,7 @@ export default function ProfileDetails({
               variant="flat"
               startContent={<IconSettings size={20} />}
             >
-              Advanced
+              Расширенные настройки
             </Button>
           </CardFooter>
         </Card>

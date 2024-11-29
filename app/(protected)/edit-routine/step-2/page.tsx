@@ -1,14 +1,15 @@
 import { auth } from "@clerk/nextjs";
 import prisma from "@/prisma/prisma";
 import PageHeading from "@/components/PageHeading/PageHeading";
-import StepProgress from "../_components/StepProgress";
 import ExerciseFilters from "@/app/(protected)/exercises/_components/Filters/ExerciseFilters";
 import ExerciseFetch from "@/app/(protected)/exercises/_components/ExerciseFetch";
 import ExerciseDetailModal from "@/app/(protected)/exercises/_components/Modals/ExerciseDetailModal/ExerciseDetailModal";
 import { Button } from "@nextui-org/button";
 import Link from "next/link";
-import { IconPlayerTrackNextFilled, IconX } from "@tabler/icons-react";
-import { IconPlayerTrackPrevFilled } from "@tabler/icons-react";
+import {
+  IconPlayerTrackNextFilled,
+  IconPlayerTrackPrevFilled,
+} from "@tabler/icons-react";
 
 export default async function NewRoutineFormStepTwo({
   searchParams,
@@ -67,11 +68,11 @@ export default async function NewRoutineFormStepTwo({
 
   return (
     <>
-      <PageHeading title="New Routine - Step 2" />
+      <PageHeading title="Новая программа - шаг 2" />
       <p className="text-zinc-600 dark:text-zinc-400 mb-3 text-sm">
-        Choose Exercises: Use search and filters to find exercises. Click
-        &apos;i&apos; for details, star to favorite, and plus to add to your
-        routine.
+        Выберите упражнения: Используйте поиск и фильтры, чтобы найти
+        упражнения. Нажмите i для получения подробной информации, звездочку,
+        чтобы выбрать, и плюс, чтобы добавить в свой в свой распорядок дня.
       </p>
       <ExerciseFilters searchParams={searchParams} />
       <ExerciseFetch
@@ -94,7 +95,7 @@ export default async function NewRoutineFormStepTwo({
           as={Link}
           href={`/edit-routine/step-1?id=${routineId}`}
         >
-          <IconPlayerTrackPrevFilled size={18} /> Back
+          <IconPlayerTrackPrevFilled size={18} /> Назад
         </Button>
         <Button
           variant="flat"
@@ -102,7 +103,7 @@ export default async function NewRoutineFormStepTwo({
           href={`/edit-routine/step-3?id=${routineId}`}
           isDisabled={!selectedExercises || selectedExercises.length === 0}
         >
-          Next <IconPlayerTrackNextFilled size={18} />
+          Дальше <IconPlayerTrackNextFilled size={18} />
         </Button>
       </div>
     </>

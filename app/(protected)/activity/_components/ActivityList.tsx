@@ -3,7 +3,7 @@ import prisma from "@/prisma/prisma";
 import { format } from "date-fns";
 import FormatDuration from "@/utils/FormatDuration";
 import Link from "next/link";
-import { Card, CardHeader, CardBody } from "@nextui-org/card";
+import { Card, CardBody, CardHeader } from "@nextui-org/card";
 import ActivityMenu from "./ActivityMenu";
 import ActivityModal from "./ActivityModal";
 import { ActivityModalProvider } from "@/contexts/ActivityModalContext";
@@ -80,7 +80,7 @@ export default async function ActivityList() {
                         <FormatDuration seconds={activity.duration} />
                       </span>
                       <span className="text-zinc-500"> | </span>
-                      <span>{totalWeight} Kg</span>
+                      <span>{totalWeight} кг</span>
                     </div>
                     <ActivityMenu activity={activity} />
                   </div>
@@ -98,7 +98,9 @@ export default async function ActivityList() {
                         <p className="grow truncate">
                           {exercise.Exercise.name}
                         </p>
-                        <p className="shrink-0">{exercise.sets.length} Sets</p>
+                        <p className="shrink-0">
+                          {exercise.sets.length} подходов
+                        </p>
                       </li>
                     ))}
                   </ul>
@@ -110,9 +112,9 @@ export default async function ActivityList() {
         </div>
       ) : (
         <p>
-          No workouts have been completed.{" "}
+          Еще ни одной тренировки{" "}
           <Link className="text-danger dark:text-primary" href="/workout">
-            Click here to start one
+            Нажми сюда чтобы начать
           </Link>
           .
         </p>

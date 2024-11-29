@@ -1,11 +1,11 @@
 "use client";
 import {
-  AreaChart,
   Area,
-  XAxis,
-  Tooltip,
+  AreaChart,
   ResponsiveContainer,
+  Tooltip,
   TooltipProps,
+  XAxis,
 } from "recharts";
 import ChartMockDataMessage from "./ChartMockDataMessage";
 
@@ -23,9 +23,9 @@ function CustomTooltip({
     return (
       <div className="bg-zinc-800 text-white px-4 py-2 rounded-xl shadow-xl text-xs">
         <p className="font-semibold">
-          Weight: <span className="text-primary">{payload[0].value}</span> Kg
+          Вес: <span className="text-primary">{payload[0].value}</span> кг
         </p>
-        <p>Period: {label}</p>
+        <p>Дата: {label}</p>
       </div>
     );
   }
@@ -42,7 +42,7 @@ export default function DashboardChartProgressOverTimeClient({
 }) {
   return (
     <>
-      {isUsingMockData && (<ChartMockDataMessage />)}
+      {isUsingMockData && <ChartMockDataMessage />}
 
       <ResponsiveContainer width="100%" height="100%">
         <AreaChart

@@ -8,8 +8,6 @@ import {
   IconChartAreaFilled,
   IconChartBar,
   IconChartLine,
-  IconChartPie,
-  IconChartRadar,
 } from "@tabler/icons-react";
 
 export default function DashboardCharts({
@@ -27,7 +25,7 @@ export default function DashboardCharts({
     <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-3 mb-3">
       <DashboardChartCard
         icon={<IconChartBar className="text-danger" />}
-        title="Frequency"
+        title="Календарь"
         colSpan="col-span-2 lg:col-span-4 xl:col-span-2"
         chartId={1}
       >
@@ -38,7 +36,7 @@ export default function DashboardCharts({
 
       <DashboardChartCard
         icon={<IconChartAreaFilled className="text-danger" />}
-        title="Progress"
+        title="Прогресс"
         colSpan="col-span-2"
         chartId={2}
       >
@@ -49,7 +47,7 @@ export default function DashboardCharts({
 
       <DashboardChartCard
         icon={<IconChartLine className="text-danger" />}
-        title="Volume Load"
+        title="Нагрузка"
         colSpan="col-span-2"
         chartId={3}
       >
@@ -58,10 +56,10 @@ export default function DashboardCharts({
         </Suspense>
       </DashboardChartCard>
 
-      {/* <DashboardChartCard 
-        icon={<IconChartRadar />} 
-        title='Exercise Split' 
-        colSpan="col-span-2" 
+      {/* <DashboardChartCard
+        icon={<IconChartRadar />}
+        title='Exercise Split'
+        colSpan="col-span-2"
         chartId={4}
       >
         <Suspense fallback={<div>Loading Chart...</div>}>

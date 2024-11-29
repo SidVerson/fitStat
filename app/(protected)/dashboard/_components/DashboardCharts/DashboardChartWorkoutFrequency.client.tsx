@@ -1,12 +1,11 @@
 "use client";
 import {
-  BarChart,
   Bar,
-  XAxis,
-  Tooltip,
+  BarChart,
   ResponsiveContainer,
+  Tooltip,
   TooltipProps,
-  CartesianGrid,
+  XAxis,
 } from "recharts";
 import ChartMockDataMessage from "./ChartMockDataMessage";
 
@@ -24,9 +23,9 @@ function CustomTooltip({
     return (
       <div className="bg-zinc-800 text-white px-4 py-2 rounded-xl shadow-xl text-xs">
         <p className="font-semibold">
-          Workouts: <span className="text-primary">{payload[0].value}</span>
+          Тренировок: <span className="text-primary">{payload[0].value}</span>
         </p>
-        <p>Period: {label}</p>
+        <p>Дата: {label}</p>
       </div>
     );
   }
@@ -43,7 +42,7 @@ export default function DashboardChartWorkoutFrequencyClient({
 }) {
   return (
     <>
-      {isUsingMockData && (<ChartMockDataMessage />)}
+      {isUsingMockData && <ChartMockDataMessage />}
 
       <ResponsiveContainer width="100%" height="100%">
         <BarChart

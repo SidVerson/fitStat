@@ -7,14 +7,14 @@ import { Button } from "@nextui-org/button";
 
 function formatDuration(seconds: number) {
   const minutes = Math.floor(seconds / 60);
-  return `${minutes}m`;
+  return `${minutes}мин`;
 }
 
 export default async function DashboardRecentActivity() {
   const { userId }: { userId: string | null } = auth();
 
   if (!userId) {
-    throw new Error("You must be signed in to view this page.");
+    throw new Error("Вы должны войти чтобы просматривать эту страницу.");
   }
 
   const recentActivity = await prisma.workoutLog.findMany({
@@ -60,7 +60,7 @@ export default async function DashboardRecentActivity() {
     <>
       {recentActivity.length > 0 && (
         <>
-          <h2 className="mb-3 mt-2 text-lg">Recent Activity</h2>
+          <h2 className="mb-3 mt-2 text-lg">Последняя активность</h2>
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-4 gap-3 mb-5">
             {recentActivity.map((activity) => {
               const totalWeight = activity.exercises.reduce(
@@ -89,7 +89,7 @@ export default async function DashboardRecentActivity() {
                           <span className="text-zinc-500">|</span>
                           <span>{formatDuration(activity.duration)}</span>
                           <span className="text-zinc-500">|</span>
-                          <span>{totalWeight} KG</span>
+                          <span>{totalWeight} кг</span>
                         </span>
                       </p>
                     </div>
@@ -105,7 +105,7 @@ export default async function DashboardRecentActivity() {
                             {exercise.Exercise.name}
                           </p>
                           <p className="shrink-0">
-                            {exercise.sets.length} Sets
+                            {exercise.sets.length} Подходов
                           </p>
                         </li>
                       ))}
@@ -117,7 +117,7 @@ export default async function DashboardRecentActivity() {
           </div>
           <div className="flex justify-center">
             <Button as={Link} href="/activity">
-              View all activity
+              Просмотреть всю активность
             </Button>
           </div>
         </>

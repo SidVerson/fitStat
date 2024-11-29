@@ -6,7 +6,7 @@ export default function SidebarSearch() {
   return (
     <Input
       labelPlacement="outside"
-      placeholder="Search..."
+      placeholder="Поиск..."
       className="px-5 mb-3"
       radius="sm"
       startContent={<IconSearch />}

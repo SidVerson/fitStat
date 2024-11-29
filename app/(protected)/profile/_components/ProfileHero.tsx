@@ -18,7 +18,7 @@ export default function ProfileHero({
         imgProps={{ referrerPolicy: "no-referrer" }}
         className="w-20 h-20 text-large mb-5"
       />
-      <h4 className="text-4xl mb-3">{username || "User"}</h4>
+      <h4 className="text-4xl mb-3">{username || "Пользователь"}</h4>
     </div>
   );
 }

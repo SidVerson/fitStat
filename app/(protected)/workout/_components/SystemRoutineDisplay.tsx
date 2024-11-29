@@ -1,12 +1,12 @@
 "use client";
 import RoutineCards from "./RoutineCards";
-import { Tabs, Tab } from "@nextui-org/tabs";
+import { Tab, Tabs } from "@nextui-org/tabs";
 import {
-  IconJumpRope,
-  IconStretching,
-  IconSeeding,
-  IconScale,
   IconBarbell,
+  IconJumpRope,
+  IconScale,
+  IconSeeding,
+  IconStretching,
 } from "@tabler/icons-react";
 import { WorkoutPlan } from "@prisma/client";
 
@@ -45,12 +45,12 @@ export default function SystemRoutineDisplay({
           title={
             <div className="flex items-center space-x-2">
               <IconBarbell />
-              <span className="hidden lg:block">Strength</span>
+              <span className="hidden lg:block">Силовые</span>
             </div>
           }
         >
           <h4 className="text-xl font-semibold mb-3 block md:hidden">
-            Strength
+            Силовые
           </h4>
           <RoutineCards routines={strengthRoutines} isSystem={true} />
         </Tab>
@@ -59,11 +59,11 @@ export default function SystemRoutineDisplay({
           title={
             <div className="flex items-center space-x-2">
               <IconJumpRope />
-              <span className="hidden lg:block">Cardio</span>
+              <span className="hidden lg:block">Кардио</span>
             </div>
           }
         >
-          <h4 className="text-xl font-semibold mb-3 block md:hidden">Cardio</h4>
+          <h4 className="text-xl font-semibold mb-3 block md:hidden">Кардио</h4>
           <p>Coming soon</p>
         </Tab>
         <Tab
@@ -71,12 +71,12 @@ export default function SystemRoutineDisplay({
           title={
             <div className="flex items-center space-x-2">
               <IconStretching />
-              <span className="hidden lg:block">Flexibility</span>
+              <span className="hidden lg:block">Гибкость</span>
             </div>
           }
         >
           <h4 className="text-xl font-semibold mb-3 block md:hidden">
-            Flexibility
+            Гибкость
           </h4>
           <p>Coming soon</p>
         </Tab>
@@ -85,12 +85,12 @@ export default function SystemRoutineDisplay({
           title={
             <div className="flex items-center space-x-2">
               <IconScale />
-              <span className="hidden lg:block">Weight Loss</span>
+              <span className="hidden lg:block">Сброс веса</span>
             </div>
           }
         >
           <h4 className="text-xl font-semibold mb-3 block md:hidden">
-            Weight Loss
+            Сброс веса
           </h4>
           <p>Coming soon</p>
         </Tab>
@@ -99,12 +99,12 @@ export default function SystemRoutineDisplay({
           title={
             <div className="flex items-center space-x-2">
               <IconSeeding />
-              <span className="hidden lg:block">Beginner</span>
+              <span className="hidden lg:block">Для начинающих</span>
             </div>
           }
         >
           <h4 className="text-xl font-semibold mb-3 block md:hidden">
-            Beginner
+            Для начинающих
           </h4>
           <p>Coming soon</p>
         </Tab>

@@ -67,10 +67,10 @@ export default async function ExercisesPage({
 
   return (
     <ExerciseAddToRoutineModalProvider>
-      <PageHeading title="Exercises" />
+      <PageHeading title="Упражнения" />
       <ExerciseFilters searchParams={searchParams} />
-      {/* <Suspense 
-        key={search + cat + muscle + level + force + currentPage} 
+      {/* <Suspense
+        key={search + cat + muscle + level + force + currentPage}
         fallback={<ExerciseTableSkeleton />}
       > */}
       <ExerciseFetch

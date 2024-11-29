@@ -22,7 +22,7 @@ export default async function DashboardCardWeeklyWorkouts() {
 
   return (
     <DashboardCardTemplate
-      title="Weekly Workouts"
+      title="Еженедельные тренировки"
       icon={<IconCalendarWeek className="text-danger" />}
     >
       {workouts.length}

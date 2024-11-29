@@ -33,7 +33,7 @@ export default async function DashboardCardAverageWorkoutDuration() {
 
   return (
     <DashboardCardTemplate
-      title="Avg Workout Time"
+      title="Среднее время тренировки"
       icon={<IconHourglass className="text-danger" />}
     >
       {averageDuration}

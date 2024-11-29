@@ -1,11 +1,11 @@
 "use client";
 import {
   Table,
-  TableHeader,
   TableBody,
-  TableColumn,
-  TableRow,
   TableCell,
+  TableColumn,
+  TableHeader,
+  TableRow,
 } from "@nextui-org/table";
 import { Input } from "@nextui-org/input";
 import { IconSquareCheck } from "@tabler/icons-react";
@@ -66,12 +66,12 @@ export default function ExerciseTable({
       shadow="none"
     >
       <TableHeader>
-        <TableColumn>SET</TableColumn>
-        <TableColumn>KG</TableColumn>
+        <TableColumn>Подход</TableColumn>
+        <TableColumn>кг</TableColumn>
         {exerciseDetail.trackingType === "duration" ? (
-          <TableColumn>DURATION</TableColumn>
+          <TableColumn>Длительность</TableColumn>
         ) : (
-          <TableColumn>REPS</TableColumn>
+          <TableColumn>Повторения</TableColumn>
         )}
         <TableColumn className="flex justify-center items-center">
           <IconSquareCheck />
@@ -85,10 +85,12 @@ export default function ExerciseTable({
               <Input
                 size="sm"
                 type="number"
-                label="Weight"
+                label="Вес"
                 placeholder="0"
                 defaultValue={set.weight !== null ? String(set.weight) : ""}
-                endContent={<span className="text-zinc-600 dark:text-zinc-400">kg</span>}
+                endContent={
+                  <span className="text-zinc-600 dark:text-zinc-400">кг</span>
+                }
                 onInput={(e) => {
                   const value = e.currentTarget.value;
                   if (!/^(\d*\.?\d{0,2}|\.\d{0,2})$/.test(value)) {
@@ -106,12 +108,16 @@ export default function ExerciseTable({
                 <Input
                   size="sm"
                   type="number"
-                  label="Duration"
+                  label="Длительность"
                   defaultValue={
                     set.duration !== null ? String(set.duration) : ""
                   }
                   placeholder="0"
-                  endContent={<span className="text-zinc-600 dark:text-zinc-400">s</span>}
+                  endContent={
+                    <span className="text-zinc-600 dark:text-zinc-400">
+                      сек
+                    </span>
+                  }
                   onInput={(e) => {
                     const value = e.currentTarget.value;
                     if (!/^\d*$/.test(value)) {
@@ -132,7 +138,7 @@ export default function ExerciseTable({
               <TableCell>
                 <Input
                   size="sm"
-                  label="Reps"
+                  label="Повторения"
                   type="number"
                   placeholder="0"
                   defaultValue={set.reps !== null ? String(set.reps) : ""}

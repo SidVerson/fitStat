@@ -1,13 +1,13 @@
 "use client";
-import { useSearchParams, usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Select, SelectItem } from "@nextui-org/select";
 import { Selection } from "@react-types/shared";
 import { IconFilter } from "@tabler/icons-react";
 
 const forces = [
-  { label: "Pull", value: "pull" },
-  { label: "Push", value: "push" },
-  { label: "Static", value: "static" },
+  { label: "Тяговая", value: "pull" },
+  { label: "Толкающая", value: "push" },
+  { label: "Статическая", value: "static" },
 ];
 
 export default function ExerciseFilterForce() {
@@ -35,8 +35,8 @@ export default function ExerciseFilterForce() {
   return (
     <Select
       key={selectedKeys ? selectedKeys.size : "empty"}
-      label="Force"
-      placeholder="Select a force..."
+      label="Нагрузка"
+      placeholder="Выберите нагрузку..."
       size="sm"
       items={forces}
       onSelectionChange={handleFilterForce}

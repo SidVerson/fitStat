@@ -50,23 +50,23 @@ export default function SidebarWorkoutControls() {
                 {isPaused ? (
                   <>
                     <IconPlayerPlay />
-                    Resume
+                    Продолжить
                   </>
                 ) : (
                   <>
                     <IconPlayerPause />
-                    Pause
+                    Пауза
                   </>
                 )}
               </Button>
             </div>
             {workoutPath !== pathname && (
               <div className="text-center text-sm text-primary">
-                <Link href={workoutPath}>View Details</Link>
+                <Link href={workoutPath}>ПОдробнее</Link>
               </div>
             )}
             <div className="text-center text-xs text-default-500">
-              Start Time: {formattedStartTime}
+              Начало: {formattedStartTime}
             </div>
           </div>
         </div>

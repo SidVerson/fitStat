@@ -27,51 +27,49 @@ interface WorkoutPlanInput {
 }
 
 export const predefinedWorkouts: WorkoutPlanInput[] = [
-  // Strength
-
   {
-    name: "Full-Body Strength Builder",
-    systemRoutineCategory: "Strength",
+    name: "Тренировка для всего тела по силе",
+    systemRoutineCategory: "Сила",
     notes:
-      "This workout is designed to target all major muscle groups, providing a solid foundation of strength. Perfect for those looking to improve overall strength and endurance.",
+      "Эта тренировка направлена на проработку всех основных групп мышц, создавая прочную основу для силы. Идеально для тех, кто хочет улучшить общую силу и выносливость.",
     WorkoutPlanExercises: [
       {
-        exerciseId: "4ba75032-bdee-4369-a007-3346dd26f4fa", // Barbell Squat
+        exerciseId: "5d31ddf6-0bb6-49c5-bace-c6757e62067d",
         sets: 3,
         reps: 8,
         order: 1,
         trackingType: "reps",
       },
       {
-        exerciseId: "6792b0e8-d064-4da6-953e-b7593f30ce80", // Barbell Bench Press - Medium Grip
+        exerciseId: "02b01ad9-6f16-4f49-88f6-7f8d2b850825",
         sets: 3,
         reps: 8,
         order: 2,
         trackingType: "reps",
       },
       {
-        exerciseId: "02c17c80-8a7f-4213-a8a7-500b1f4c4e9f", // Barbell Deadlift
+        exerciseId: "638ae255-0e53-4bfd-ac92-f21481ddd29b",
         sets: 3,
         reps: 8,
         order: 3,
         trackingType: "reps",
       },
       {
-        exerciseId: "8fdd5051-eb06-4ff9-b477-54254a34d43a", // Wide-Grip Lat Pulldown
+        exerciseId: "61d98bf0-30e1-498a-b875-23f500c6d4b5",
         sets: 3,
         reps: 8,
         order: 4,
         trackingType: "reps",
       },
       {
-        exerciseId: "449e4f68-95c8-40a5-acde-cc76c36d8604", // Machine Shoulder (Military) Press
+        exerciseId: "93b9ccd7-6436-47ad-aafc-81a1db980853",
         sets: 3,
         reps: 8,
         order: 5,
         trackingType: "reps",
       },
       {
-        exerciseId: "0fef6129-ee7f-4395-ab16-bd42e3b059f1", // Plank
+        exerciseId: "d1c021e4-f82b-40a2-a882-9d4cab6faec5",
         sets: 3,
         duration: 30,
         order: 6,
@@ -80,48 +78,48 @@ export const predefinedWorkouts: WorkoutPlanInput[] = [
     ],
   },
   {
-    name: "Upper Body Power",
-    systemRoutineCategory: "Strength",
+    name: "Сила верхней части тела",
+    systemRoutineCategory: "Сила",
     notes:
-      "Focus on building strength in the chest, back, shoulders, and arms. Ideal for those wanting to increase upper body power and muscular definition.",
+      "Фокус на развитие силы в груди, спине, плечах и руках. Идеально для тех, кто хочет увеличить силу верхней части тела и мышечное рельефное развитие.",
     WorkoutPlanExercises: [
       {
-        exerciseId: "6792b0e8-d064-4da6-953e-b7593f30ce80", // Barbell Bench Press - Medium Grip
+        exerciseId: "5decc5cc-8e71-49d4-8f76-c61dfd4b314f",
         sets: 4,
         reps: 6,
         order: 1,
         trackingType: "reps",
       },
       {
-        exerciseId: "6fb8da54-38fb-408d-951d-4b4a696b5a98", // Bent Over Barbell Row
+        exerciseId: "4971a068-7d30-440e-b28c-a2505766f870",
         sets: 4,
         reps: 6,
         order: 2,
         trackingType: "reps",
       },
       {
-        exerciseId: "d7aba9b7-1466-4aec-95f9-bd96707d1c63", // Dumbbell Shoulder Press
+        exerciseId: "7e5b08db-9005-43d9-829d-698c4e69cd56",
         sets: 3,
         reps: 8,
         order: 3,
         trackingType: "reps",
       },
       {
-        exerciseId: "6988bd28-62fa-4d77-9df4-3eebcb960c20", // Pullups
+        exerciseId: "b338cafd-3527-4c5d-9b33-6a79f0d73c10",
         sets: 3,
         reps: 10,
         order: 4,
         trackingType: "reps",
       },
       {
-        exerciseId: "d8075b69-ab08-41c9-9a30-1d7ef58e5059", // Dumbbell Bicep Curl
+        exerciseId: "bd0feaf6-c5c3-4904-847d-78c13fd682a3",
         sets: 3,
         reps: 10,
         order: 5,
         trackingType: "reps",
       },
       {
-        exerciseId: "b72ab6ab-fed4-4a3a-808c-1616be7f9f37", // Dips - Triceps Version
+        exerciseId: "1d24738f-99ed-4d09-bbd4-1476f05c2a78",
         sets: 3,
         reps: 10,
         order: 6,
@@ -130,41 +128,41 @@ export const predefinedWorkouts: WorkoutPlanInput[] = [
     ],
   },
   {
-    name: "Lower Body Blast",
-    systemRoutineCategory: "Strength",
+    name: "Взрывная тренировка для нижней части тела",
+    systemRoutineCategory: "Сила",
     notes:
-      "A comprehensive lower body workout aimed at strengthening and toning the legs and glutes. Great for building power and endurance.",
+      "Комплексная тренировка для нижней части тела, направленная на укрепление и тонизацию ног и ягодиц. Отлично подходит для построения силы и выносливости.",
     WorkoutPlanExercises: [
       {
-        exerciseId: "4ba75032-bdee-4369-a007-3346dd26f4fa", // Barbell Squat
+        exerciseId: "070ee9ad-a152-4ec7-a9cf-af7dce0b588a",
         sets: 4,
         reps: 8,
         order: 1,
         trackingType: "reps",
       },
       {
-        exerciseId: "02c17c80-8a7f-4213-a8a7-500b1f4c4e9f", // Barbell Deadlift
+        exerciseId: "395e0fdb-56bb-4010-b76b-5c2a5da5b8c1",
         sets: 4,
         reps: 8,
         order: 2,
         trackingType: "reps",
       },
       {
-        exerciseId: "8b7aa481-75d3-463d-8e8d-642452622892", // Dumbbell Lunges
+        exerciseId: "5c142963-87a6-47ad-b86f-b72233210c9c",
         sets: 3,
         reps: 10,
         order: 3,
         trackingType: "reps",
       },
       {
-        exerciseId: "f72b7d1f-183c-4ec4-9d41-6963eb300e52", // Leg Press
+        exerciseId: "5e562c3a-460f-4b5b-a290-a111ed330600",
         sets: 3,
         reps: 10,
         order: 4,
         trackingType: "reps",
       },
       {
-        exerciseId: "00a8d01d-f9b9-4dba-bbba-3f341e873dec", // Standing Dumbbell Calf Raise
+        exerciseId: "25ad79dd-25c7-42e3-87ec-568badf06b9c",
         sets: 3,
         reps: 15,
         order: 5,
@@ -173,41 +171,41 @@ export const predefinedWorkouts: WorkoutPlanInput[] = [
     ],
   },
   {
-    name: "Core Stability and Strength",
-    systemRoutineCategory: "Strength",
+    name: "Стабильность и сила кора",
+    systemRoutineCategory: "Сила",
     notes:
-      "This routine is centered around building core muscle strength and stability, which is essential for overall fitness and injury prevention.",
+      "Эта тренировка сосредоточена на укреплении и стабилизации мышц кора, что важно для общей физической формы и профилактики травм.",
     WorkoutPlanExercises: [
       {
-        exerciseId: "0fef6129-ee7f-4395-ab16-bd42e3b059f1", // Plank
+        exerciseId: "2edae032-539a-46c4-955a-246e43ee3e1e",
         sets: 3,
         duration: 30,
         order: 1,
         trackingType: "duration",
       },
       {
-        exerciseId: "611a7088-465e-4c57-8f7b-43f3e271b485", // Standing Cable Wood Chop
+        exerciseId: "64b0848c-3111-42af-81fe-277267ac8e35",
         sets: 3,
         reps: 12,
         order: 2,
         trackingType: "reps",
       },
       {
-        exerciseId: "0bb417f9-8637-4ca3-bb2b-d20d48993e2e", // Russian Twist
+        exerciseId: "618fbbce-f6e5-413f-9428-d5cda26f658a",
         sets: 3,
         reps: 15,
         order: 3,
         trackingType: "reps",
       },
       {
-        exerciseId: "73c69ac7-d456-429e-a224-4a906ae791e0", // Cross-Body Crunch
+        exerciseId: "a74d6c2a-3091-4991-a194-7a8a08651283",
         sets: 3,
         reps: 20,
         order: 4,
         trackingType: "reps",
       },
       {
-        exerciseId: "a6373002-94c0-4218-a5a5-148f8ee848dc", // Hanging Leg Raise
+        exerciseId: "17651cd9-6c45-485f-9b9a-4008bee3e7c3",
         sets: 3,
         reps: 10,
         order: 5,

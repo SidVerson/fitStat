@@ -1,42 +1,41 @@
 import Link from "next/link";
 import {
-  IconChartBar,
-  IconBook,
-  IconPlayerPlayFilled,
-  //IconStretching,
-  //IconJumpRope,
   IconActivity,
-  //IconBrandOpenai,
-  //IconUser,
+  IconBook,
+  IconChartBar,
+  IconJumpRope,
   IconListCheck,
-  IconFlame,
+  IconPlayerPlayFilled,
+  IconStretching,
+  IconTournament,
+  IconUser,
 } from "@tabler/icons-react";
 import Image from "next/image";
 import { Button } from "@nextui-org/button";
 import { Card, CardBody, CardHeader } from "@nextui-org/card";
-//import PricingCard from "@/components/LandingPage/PricingCard";
+import PricingCard from "@/components/LandingPage/PricingCard";
 
 export default function Home() {
   const cardData = [
     {
       icon: IconBook,
-      title: "Discover Your Perfect Workout",
-      body: "Dive into an expansive library of exercises complete with detailed guides, videos, and tips. Whether you're aiming to tone, build muscle, or improve flexibility, our vast collection has you covered. Filter by muscle group, difficulty, or equipment to easily find exercises that match your goals. It's like having a personal trainer in your pocket!",
+      title: "Откройте для себя свою идеальную тренировку",
+      body: "Окунитесь в обширную библиотеку упражнений с подробными руководствами, видео и советами. Если вы хотите привести себя в тонус, нарастить мышцы или улучшить гибкость, наша обширная коллекция поможет вам в этом. Фильтруйте упражнения по группам мышц, сложности или оборудованию, чтобы легко найти те, которые соответствуют вашим целям. Это как личный тренер в кармане!",
     },
     {
       icon: IconListCheck,
-      title: "Tailor-Made Fitness Plans",
-      body: "Create workout routines that are uniquely yours. Select from our comprehensive exercise database to craft plans that fit your goals, schedule, and fitness level. Adjust sets, reps, and duration to match your progress. With the ability to personalize your fitness journey, reaching your goals has never been more attainable.",
+      title: "Индивидуальные фитнес-планы",
+      body: "Создавайте уникальные тренировки. Выберите из нашей обширной базы данных упражнения, чтобы составить план, соответствующий вашим целям, расписанию и уровню физической подготовки. Регулируйте количество сетов, повторений и продолжительность занятий в соответствии с вашими достижениями. Благодаря возможности персонализировать свой фитнес-путь, достижение ваших целей еще никогда не было таким достижимым.",
     },
     {
       icon: IconActivity,
-      title: "Log As You Lift",
-      body: "Stay focused and on track with real-time workout tracking. Initiate any routine from your plan and log your performance as you go—record every rep, set, and the weight you lift with ease. This immediate feedback keeps you motivated and ensures every workout counts towards your fitness milestones.",
+      title: "Отслеживайте на ходу",
+      body: "Не отвлекайтесь от тренировок, отслеживая их в режиме реального времени. Начните любую тренировку по своему плану и регистрируйте свои результаты по мере выполнения - записывайте каждое повторение, сет и вес, который вы поднимаете с легкостью. Такая оперативная обратная связь поддерживает мотивацию и гарантирует, что каждая тренировка пойдет в зачет ваших фитнес-величин.",
     },
     {
       icon: IconChartBar,
-      title: "Visualize Your Victory",
-      body: "Watch your fitness journey unfold with our detailed progress tracking and analytics. From workout summaries to trend analyses, our dashboard offers valuable insights into your performance over time. Set goals, monitor your achievements, and celebrate every improvement. With our analytics, you're not just working out; you're building a better you.",
+      title: "Визуализируйте свою победу",
+      body: "Наблюдайте за своим фитнес-путешествием с помощью подробного отслеживания прогресса и аналитики. Наша приборная панель предлагает ценные сведения о ваших результатах с течением времени - от краткого описания тренировок до анализа тенденций. Ставьте цели, отслеживайте свои достижения и радуйтесь каждому улучшению. С нашей аналитикой вы не просто тренируетесь, вы строите себя лучше.",
     },
   ];
 
@@ -44,8 +43,8 @@ export default function Home() {
     <main className="min-h-dvh bg-gradient-to-b from-white to-zinc-200 dark:from-zinc-900 dark:to-zinc-950">
       <nav className="px-3 md:px-10 py-3 mb-5 flex justify-between items-center">
         <h4 className="flex items-center text-lg gap-2 font-semibold tracking-tight">
-          <IconFlame className="text-primary" />
-          FitForge
+          <IconTournament className="text-primary" />
+          FitStat
         </h4>
       </nav>
 
@@ -53,20 +52,20 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
           <div className="flex flex-col justify-center">
             <h1 className="text-4xl md:text-6xl xl:text-7xl tracking-tight font-bold">
-              Track every{" "}
+              Отслеживайте каждый{" "}
               <span className="from-primary to-primary-600 bg-clip-text text-transparent bg-gradient-to-b">
-                Rep{" "}
+                Подход{" "}
               </span>
             </h1>
             <h1 className="text-4xl md:text-6xl xl:text-7xl tracking-tight font-bold mb-5">
-              Achieve every{" "}
+              Достигните любых{" "}
               <span className="from-primary to-primary-600 bg-clip-text text-transparent bg-gradient-to-b">
-                Goal{" "}
+                Целей{" "}
               </span>
             </h1>
             <p className="text-lg text-zinc-500 mb-5">
-              Your ultimate fitness companion. Stay on track, stay active with
-              FitForge.
+              Ваш незаменимый спутник в фитнесе. Будьте на высоте, оставайтесь
+              активными с FitStat.
             </p>
             <div className="flex gap-3">
               <Button
@@ -77,13 +76,13 @@ export default function Home() {
                 size="lg"
               >
                 <IconPlayerPlayFilled size={18} />
-                Get Started
+                Начать
               </Button>
             </div>
           </div>
           <div className="hidden lg:block">
             <Image
-              src="/images/screenshots/ss_exercise.webp"
+              src="/images/screenshots/img.png"
               alt="Screenshot of exercises page"
               width={1436}
               height={957}
@@ -113,67 +112,96 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <section className="mb-10 py-5 px-3 md:px-10">
+      <section className="mb-10 py-5 px-3 md:px-10">
         <h2 className="text-center text-6xl my-10 font-bold">
-          The Perfect Plan <span className="text-primary">For Your Needs</span>
+          Тариф <span className="text-primary">Под любые потребности</span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-
-          <PricingCard 
-            title="Standard"
-            subtitle="For the basics"
-            price="$0"
-            description="Free forever, no commitments"
-            buttonText="Get Started"
+          <PricingCard
+            title="Стандартный"
+            subtitle="Для новчиков"
+            price="0"
+            description="Бесплатно навсегда, без обязательств"
+            buttonText="Начать"
             buttonLink="/dashboard"
             features={[
-              { icon: <IconJumpRope size={18} />, text: "Unlimited Routines" },
-              { icon: <IconStretching size={18} />, text: "Access to all of our 900+ Exercises" },
-              { icon: <IconActivity size={18} />, text: "Unlimited Basic Workout Logs" },
-              { icon: <IconChartBar size={18} />, text: "Basic Charts" },
-              { icon: <IconUser size={18} />, text: "Simple Profile" },
+              {
+                icon: <IconJumpRope size={18} />,
+                text: "Неограниченные возможности",
+              },
+              {
+                icon: <IconStretching size={18} />,
+                text: "Доступ ко всем нашим 900 с лишним упражнениям",
+              },
+              {
+                icon: <IconActivity size={18} />,
+                text: "Неограниченное количество базовых журналов тренировок",
+              },
+              { icon: <IconChartBar size={18} />, text: "Базовая статистика" },
+              { icon: <IconUser size={18} />, text: "Базовый профиль" },
             ]}
           />
 
-          <PricingCard 
-            title="Pro (Monthly)"
-            subtitle="Per month, cancel anytime."
-            price="$4.99"
-            description="Per month, cancel anytime."
-            buttonText="Coming soon"
+          <PricingCard
+            title="Про (Ежемесячный)"
+            subtitle="Ежемесячно, отмена в любое время."
+            price="14.99 BYN"
+            description="Ежемесячно, отмена в любое время."
+            buttonText="Скоро"
             buttonDisabled={true}
             buttonLink="/dashboard"
             highlight={true}
             features={[
-              { icon: <IconJumpRope size={18} />, text: "Unlimited Routines" },
-              { icon: <IconStretching size={18} />, text: "Access to all of our 900+ Exercises" },
-              { icon: <IconActivity size={18} />, text: "Unlimited Advnaced Workout Logs" },
-              { icon: <IconChartBar size={18} />, text: "Advanced Charts" },
-              { icon: <IconUser size={18} />, text: "Advanced Profile" },
-              { icon: <IconBrandOpenai size={18} />, text: "AI Features"},
+              {
+                icon: <IconJumpRope size={18} />,
+                text: "Неограниченные возможности",
+              },
+              {
+                icon: <IconStretching size={18} />,
+                text: "Доступ ко всем нашим 900 с лишним упражнениям",
+              },
+              {
+                icon: <IconActivity size={18} />,
+                text: "Неограниченное количество расширенных журналов тренировок",
+              },
+              {
+                icon: <IconChartBar size={18} />,
+                text: "Продвинутая статистика",
+              },
+              { icon: <IconUser size={18} />, text: "Продвинутый профиль" },
             ]}
           />
 
-          <PricingCard 
-            title="Pro (Yearly)"
-            subtitle="Per month, cancel anytime."
-            price="$49.99"
-            description="Per month, cancel anytime."
-            buttonText="Coming soon"
+          <PricingCard
+            title="Про (на год)"
+            subtitle="Один платеж по выгодной цене"
+            price="149.99BYN"
+            description="Один платеж по выгодной цене"
+            buttonText="Скоро"
             buttonLink="/dashboard"
             buttonDisabled={true}
             features={[
-              { icon: <IconJumpRope size={18} />, text: "Unlimited Routines" },
-              { icon: <IconStretching size={18} />, text: "Access to all of our 900+ Exercises" },
-              { icon: <IconActivity size={18} />, text: "Unlimited Advnaced Workout Logs" },
-              { icon: <IconChartBar size={18} />, text: "Advanced Charts" },
-              { icon: <IconUser size={18} />, text: "Advanced Profile" },
-              { icon: <IconBrandOpenai size={18} />, text: "AI Features"},
+              {
+                icon: <IconJumpRope size={18} />,
+                text: "Неограниченные возможности",
+              },
+              {
+                icon: <IconStretching size={18} />,
+                text: "Доступ ко всем нашим 900 с лишним упражнениям",
+              },
+              {
+                icon: <IconActivity size={18} />,
+                text: "Неограниченное количество расширенных журналов тренировок",
+              },
+              {
+                icon: <IconChartBar size={18} />,
+                text: "Продвинутая статистика",
+              },
+              { icon: <IconUser size={18} />, text: "Продвинутый профиль" },
             ]}
           />
-
         </div>
-      </section> */}
+      </section>
     </main>
   );
 }

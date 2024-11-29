@@ -1,27 +1,27 @@
 "use client";
-import { useSearchParams, usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Select, SelectItem } from "@nextui-org/select";
 import { Selection } from "@react-types/shared";
 import { IconFilter } from "@tabler/icons-react";
 
 const muscles = [
-  { label: "Abdominals", value: "abdominals" },
-  { label: "Hamstrings", value: "hamstrings" },
-  { label: "Adductors", value: "adductors" },
-  { label: "Quadriceps", value: "quadriceps" },
-  { label: "Biceps", value: "biceps" },
-  { label: "Shoulders", value: "shoulders" },
-  { label: "Chest", value: "chest" },
-  { label: "Middle Back", value: "middle_back" },
-  { label: "Calves", value: "calves" },
-  { label: "Glutes", value: "glutes" },
-  { label: "Lower Back", value: "lower_back" },
-  { label: "Lats", value: "lats" },
-  { label: "Triceps", value: "triceps" },
-  { label: "Traps", value: "traps" },
-  { label: "Forearms", value: "forearms" },
-  { label: "Neck", value: "neck" },
-  { label: "Abductors", value: "abductors" },
+  { label: "Брюшные мышцы", value: "abdominals" },
+  { label: "Подколенные сухожилия", value: "hamstrings" },
+  { label: "Аддукторы", value: "adductors" },
+  { label: "Квадрицепс", value: "quadriceps" },
+  { label: "Бицепсы", value: "biceps" },
+  { label: "Плечи", value: "shoulders" },
+  { label: "Грудь", value: "chest" },
+  { label: "Средняя часть спины", value: "middle_back" },
+  { label: "Икры", value: "calves" },
+  { label: "Ягодицы", value: "glutes" },
+  { label: "Нижняя часть спины", value: "lower_back" },
+  { label: "Латы", value: "lats" },
+  { label: "Трицепс", value: "triceps" },
+  { label: "Трапеции", value: "traps" },
+  { label: "Предплечья", value: "forearms" },
+  { label: "Шея", value: "neck" },
+  { label: "Реберные мышцы", value: "abductors" },
 ];
 
 export default function ExerciseFilterMuscle() {
@@ -49,8 +49,8 @@ export default function ExerciseFilterMuscle() {
   return (
     <Select
       key={selectedKeys ? selectedKeys.size : "empty"}
-      label="Muscle Group"
-      placeholder="Select a muscle..."
+      label="Группы мышц"
+      placeholder="Выберите мышцы..."
       size="sm"
       items={muscles}
       onSelectionChange={handleFilterMuscle}

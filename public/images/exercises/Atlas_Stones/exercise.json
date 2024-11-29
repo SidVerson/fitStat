@@ -1,27 +1,22 @@
 {
-  "name": "Atlas Stones",
+  "name": "Тренажер Атласного Камня",
   "force": "pull",
-  "level": "expert",
+  "level": "intermediate",
   "mechanic": "compound",
   "equipment": "other",
-  "primaryMuscles": ["lower back"],
+  "primaryMuscles": ["lower_back"],
   "secondaryMuscles": [
-    "abdominals",
-    "adductors",
     "biceps",
-    "calves",
     "forearms",
     "glutes",
     "hamstrings",
-    "middle back",
-    "quadriceps",
-    "traps"
+    "quadriceps"
   ],
   "instructions": [
-    "Begin with the atlas stone between your feet. Bend at the hips to wrap your arms vertically around the Atlas Stone, attempting to get your fingers underneath the stone. Many stones will have a small flat portion on the bottom, which will make the stone easier to hold.",
-    "Pulling the stone into your torso, drive through the back half of your feet to pull the stone from the ground.",
-    "As the stone passes the knees, lap it by sitting backward, pulling the stone on top of your thighs.",
-    "Sit low, getting the stone high onto your chest as you change your grip to reach over the stone. Stand, driving through with your hips. Close distance to the loading platform, and lean back, extending the hips to get the stone as high as possible."
+    "Этот тренажер эффективен для развития силы Атласного камня для тех, кто не имеет доступа к камням, и обычно изготавливается из концов штанги или тяжелых труб.",
+    "Начните с того, чтобы загрузить нужный вес на штангу. Встаньте на ширину плеч, обхватив груз руками, сгибая бедра.",
+    "Начните тянуть вес вверх, проходя мимо колен, выпрямляя бедра. Когда вес пройдет мимо колен, его можно положить на бедра, сидя назад и прижимая его к груди.",
+    "Завершите движение, выпрямляя бедра и колени, чтобы поднять вес как можно выше. Вес можно вернуть в положение на бедра или на пол для последующих повторений."
   ],
   "category": "strongman"
 }
